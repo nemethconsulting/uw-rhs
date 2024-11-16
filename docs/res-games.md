@@ -1,0 +1,3 @@
+Understanding the games resource in the Hockey League API
+
+...
