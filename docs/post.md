@@ -1,3 +1,0 @@
-Using the POST method with the Hockey League API
-
-...
