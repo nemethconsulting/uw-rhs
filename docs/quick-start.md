@@ -10,11 +10,11 @@ Make sure the server is running on your local machine
 1. Create and checkout a test branch of your fork of the rec-hockey-service repo. Your `GitHub repo workspace` is the directory that contains your fork of the `uw-rhs` repo.
 
     ```shell
-    cd <your GitHub repo workspace>
+    cd <your GitHub repo workspace // delete angle brackets>
     ls
     # (see the uw-rhs directory in the list)
     cd uw-rhs
-    git checkout -b -{your working branch}
+    git checkout -b -<your working branch // delete angle brackets>
     ls
     cd api
     sh start-server.sh
