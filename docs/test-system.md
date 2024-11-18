@@ -1,15 +1,15 @@
 # Test your development system
 
-1. Create and checkout a test branch of your fork of the rec-hockey-service repo. Your `GitHub repo workspace` is the directory that contains your fork of the `uw-rhs` repo.
+1. Create and checkout a branch of your clone of the rec-hockey-service repo. Your `GitHub repo workspace` is the directory that contains your clone of the `uw-rhs` repo.
 
     ```shell
     cd <your GitHub repo workspace>
     ls
     # (see the uw-rhs directory in the list)
     cd uw-rhs
-    git checkout -b -test
+    git checkout -b -<the branch you want to test>
     cd api
-    json-server -w rec-hockey-service.json
+    sh start-server.sh
     ```
 
     If your development system is installed correctly, you should see
