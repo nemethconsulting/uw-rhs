@@ -1,18 +1,28 @@
 # Use these links to discover more about the Rec Hockey League API
 
+## Prerequisites
+1. [Set up](prerequisites.md) your system to call our API
+2. [Test](test-system.md) your set up
+
 ## Quick Start
 [Make your first call!](quick-start.md)
 
 ## CRUD
 Overview of the HTTP methods used with this API
-1. [POST](post.md)
-2. [GET](get.md)
-3. [PUT](put.md)
-4. [DELETE](delete.md)
+1. For the teams resource:
+    - [POST](post-team.md)
+    - [GET](get-teams.md)
+    - [PUT](put-teams.md)
+    - [DELETE](delete-teams.md)
+2. For the games resource:
+    - [POST](post-games.md)
+    - [GET](get-games.md)
+    - [PUT](put-games.md)
+    - [DELETE](delete-games.md)
 
 ## Tutorials
 1. [Create an entry for your team](tut-create-team.md)
-2. [Retrieve your teams's schedule](tut-get-schedule.md)
+2. [Add games to your team's calendar](tut-add-games.md)
 3. [Add the final score of a game](tut-add-score.md)
 4. [Retrieve the league's win/loss records](tut-get-wins.md)
 
