@@ -27,7 +27,7 @@ the service start and display the URL of the service: `http://localhost:3000`. Y
 
 ### Find your team
 
-1. Locate your team with a simple GET call to `teams` resource.
+1. Locate your team with a simple GET call to the `teams` resource.
 
 ```shell
 curl "http://localhost:3000/teams"
@@ -62,7 +62,7 @@ curl "http://localhost:3000/teams"
 1. Use another GET call to pull your team's schedule from the `games` resource.
 
 ```shell
-$ curl "http://localhost:3000/games?teamId=4"
+$ curl "http://localhost:3000/games?{teamId=}"
 ```
 2. The returned data should look like:
 
