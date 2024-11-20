@@ -21,6 +21,7 @@ Overview of the HTTP methods used with this API
     - [DELETE](delete-games.md)
 
 ## Tutorials
+- [Note on null or empty fields](tut-null-fields.md)
 1. [Create an entry for your team](tut-create-team.md)
 2. [Add games to your team's calendar](tut-add-games.md)
 3. [Add the final score of a game](tut-add-score.md)
