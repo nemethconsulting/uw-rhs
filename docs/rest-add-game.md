@@ -1,3 +1,0 @@
-Add a game or series of games to your team's schedule
-
-...

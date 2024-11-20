@@ -1,3 +1,0 @@
-Using the PUT method with the Hockey League API
-
-...
