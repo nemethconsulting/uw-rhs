@@ -146,6 +146,26 @@
       "winLossRatio": "win-loss-OT loss",
       "coach": "name of your coach",
       "numberOfPlayers": 0
-    }
+    },
+    {
+      "id": 6,
+      "teamName": "your team name",
+      "headquarters": "your city and state",
+      "mascot": "TBD",
+      "winLossRatio": "win-loss-OT loss",
+      "coach": "",
+      "numberOfPlayers": 0
+    },
+    [
+      {
+        "id": 9,
+        "teamName": "your team name",
+        "headquarters": "your city and state",
+        "mascot": "the name of your mascot",
+        "winLossRatio": "0-0-0",
+        "coach": "your team's coach",
+        "numberOfPlayers": 17
+      }
+    ]
   ]
 }
