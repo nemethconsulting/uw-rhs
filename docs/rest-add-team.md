@@ -1,3 +1,0 @@
-Add your team to the Hockey League database
-
-...
