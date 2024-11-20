@@ -103,6 +103,10 @@ $ curl "http://localhost:3000/games?{teamId=}"
 1. In the Postman app, create a new request with these values:
     * **METHOD**: GET
     * **URL**: `http://localhost:3000/teams`
+    * **Headers**:
+        * `Content-Type: application/json`
+    * **Request body**:
+        You can change the values of each property as you'd like.
 2. Choose **Send** to make the request.
 3. Watch for the response body, which should look something like this. 
 
@@ -135,6 +139,10 @@ $ curl "http://localhost:3000/games?{teamId=}"
 1. In the Postman app, create a new request with these values:
     * **METHOD**: GET
     * **URL**: `http://localhost:3000/games?teamId={teamId}
+    * **Headers**:
+        * `Content-Type: application/json`
+    * **Request body**:
+        You can change the values of each property as you'd like.
 2. Choose **Send** to make the request.
 3. Watch for the response body, which should look something like this. 
 ```js
