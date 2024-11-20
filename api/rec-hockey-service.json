@@ -66,7 +66,7 @@
                 },
                 {
                     "gameNumber": 2,
-                    "date": "2024-10-11T19:30:00-05:00",
+                    "date": "2024-10-15T19:30:00-05:00",
                     "homeGame": false,
                     "opposingTeam": "New Jersey Devils",
                     "locationName": "Prudential Center",
@@ -91,7 +91,7 @@
                 },
                 {
                     "gameNumber": 2,
-                    "date": "2024-10-011T19:30:00-05:00",
+                    "date": "2024-10-11T19:30:00-05:00",
                     "homeGame": true,
                     "opposingTeam": "Las Vegas Golden Knights",
                     "locationName": "Capital One Arena",
@@ -109,7 +109,7 @@
             "mascot": "Iceburgh",
             "winLossRatio": "0-0-0",
             "coach": "Mike Sullivan",
-            "numberOfPlayers": "17"
+            "numberOfPlayers": 17
         },
         {
             "teamId": 2,
@@ -118,7 +118,7 @@
             "mascot": "None",
             "winLossRatio": "0-0-0",
             "coach": "Peter Philip Laviolette Jr.",
-            "numberOfPlayers": "16"
+            "numberOfPlayers": 16
         },
         {
             "teamId": 3,
@@ -127,7 +127,7 @@
             "mascot": "Stormy the Ice Hog",
             "winLossRatio": "0-0-0",
             "coach": "Rod Brind'Amour",
-            "numberOfPlayers": "18"
+            "numberOfPlayers": 18
         },
         {
             "teamId": 4,
@@ -136,33 +136,7 @@
             "mascot": "Slapshot",
             "winLossRatio": "0-0-0",
             "coach": "Spencer Carbery",
-            "numberOfPlayers": "19"
-        }
-    ],
-    "locations": [
-        {
-            "locationId": 1,
-            "locationName": "PPG Paints Arena",
-            "locationAddress": "1001 Fifth Ave, Pittsburgh, PA 15219"
-
-        },
-        {
-            "locationId": 2,
-            "locationName": "Madison Square Garden",
-            "locationAddress": "4 Penn Plaza, New York, NY 10121"
-
-        },
-        {
-            "locationId": 3,
-            "locationName": "Lenovo Center",
-            "locationAddress": "1400 Edwards Mill Road, Raleigh, NC 27607"
-
-        },
-        {
-            "locationId": 4,
-            "locationName": "Capital One Arena",
-            "locationAddress": "601 F St NW, Washington, DC 20004"
-
+            "numberOfPlayers": 19
         }
     ]
 }

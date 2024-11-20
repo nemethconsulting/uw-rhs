@@ -1,0 +1,3 @@
+Using the GET method with the Hockey League API
+
+...
