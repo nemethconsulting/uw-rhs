@@ -10,10 +10,8 @@
 ## Tutorials
 1. [Create an entry for your team](tut-create-team.md)
 2. [Add games to your team's calendar](tut-add-games.md)
-3. [Add the final score of a game](tut-add-score.md)
+3. [Update the final score of a game](tut-add-score.md)
 4. [Retrieve the league's win/loss records](tut-get-wins.md)
-5. [Update team or game details](tut-update-details.md)
-6. [Delete team or game details](tut-delete-details.md)
 
 ## API Reference Docs
 1. [games resource](res-games.md)
@@ -23,3 +21,4 @@
 
 ## FAQ's and Troubleshooting
 1. [Note on null or empty fields](tut-null-fields.md)
+2. [Error codes and messages](tut-errors.md)
