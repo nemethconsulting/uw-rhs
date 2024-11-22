@@ -182,7 +182,7 @@ have a unique team `id` before creating your team.
 Here are related tutorials you may want to look at:
 
 1. [Add games to your team's calendar](tut-add-games.md)
-2. [Update team or game details](tut-update-details.md)
-3. [Delete team or game details](tut-delete-details.md)
+2. [Update the final score of a game](tut-add-score.md)
+3. [Retrieve the league's win/loss records](tut-get-wins.md)
 
 ### [Back to Main Menu](nav.md)
