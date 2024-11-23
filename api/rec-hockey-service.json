@@ -38,33 +38,22 @@
     },
     {
       "id": 5,
-      "teamName": "your team name",
-      "headquarters": "your city and state",
-      "mascot": "the name of your mascot",
-      "winLossRatio": "win-loss-OT loss",
-      "coach": "name of your coach",
-      "numberOfPlayers": 0
+      "teamName": "Seattle Kraken",
+      "headquarters": "Seattle, WA",
+      "mascot": "Buoy the Troll",
+      "winLossRatio": "0-0-0",
+      "coach": "Dave Hakstol",
+      "numberOfPlayers": 23
     },
     {
       "id": 6,
-      "teamName": "your team name",
-      "headquarters": "your city and state",
-      "mascot": "TBD",
-      "winLossRatio": "win-loss-OT loss",
-      "coach": "",
-      "numberOfPlayers": 0
-    },
-    [
-      {
-        "id": 9,
-        "teamName": "your team name",
-        "headquarters": "your city and state",
-        "mascot": "the name of your mascot",
-        "winLossRatio": "0-0-0",
-        "coach": "your team's coach",
-        "numberOfPlayers": 17
-      }
-    ]
+      "teamName": "New Jersey Devils",
+      "headquarters": "Newark, NJ",
+      "mascot": "NJ Devil",
+      "winLossRatio": "0-0-0",
+      "coach": "Lindy Ruff",
+      "numberOfPlayers": 23
+    }
   ],
   "games": [
     {
