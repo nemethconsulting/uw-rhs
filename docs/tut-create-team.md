@@ -51,29 +51,29 @@ The output should look like:
 4. With your data on hand, make the following `POST` to the API.
 
 ```shell
-curl -X POST http://{base_url}/teams \
+curl -X POST http://localhost:3000/teams \
 -H "Content-Type: application/json" \
 -d '{
-        "id": 5,
-        "teamName": "your team name",
-        "headquarters": "your city and state",
-        "mascot": "the name of your mascot",
-        "winLossRatio": "win-loss-OT loss",
-        "coach": "name of your coach",
-        "numberOfPlayers": 0
-        }'
+  "id": 5,
+  "teamName": "Seattle Kraken",
+  "headquarters": "Seattle, WA",
+  "mascot": "Buoy the Troll",
+  "winLossRatio": "0-0-0",
+  "coach": "Dave Hakstol",
+  "numberOfPlayers": 23
+}'
 ```
 
 A successful response will look like this:
 ```shell
 {
-  "id": 5,
-  "teamName": "your team name",
-  "headquarters": "your city and state",
-  "mascot": "the name of your mascot",
-  "winLossRatio": "win-loss-OT loss",
-  "coach": "name of your coach",
-  "numberOfPlayers": 0
+      "id": 5,
+      "teamName": "Seattle Kraken",
+      "headquarters": "Seattle, WA",
+      "mascot": "Buoy the Troll",
+      "winLossRatio": "0-0-0",
+      "coach": "Dave Hakstol",
+      "numberOfPlayers": 23
 }
 ```
 
@@ -107,7 +107,7 @@ The response should look like:
 
 2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty fields](tut-null-fields.md) to help guide your data entry.
 
-3. Review the list of teams and take note of the highest team `id`. Your input for this field will the highest team `id` +1. (In the example below, there are already 8 teams in the database, so a new team would take the `id` of 9)
+3. Review the list of teams and take note of the highest team `id`. Your input for this field will the highest team `id` +1. (In the example below, there are already 5 teams in the database, so a new team would take the `id` of 6)
 
 4. With your data on hand, make the following `POST`.
 
@@ -119,33 +119,29 @@ The response should look like:
         You can change the values of each property as you'd like.
 
 ```js
-[
-    {
-        "id": 9,
-        "teamName": "your team name",
-        "headquarters": "your city and state",
-        "mascot": "the name of your mascot",
-        "winLossRatio": "0-0-0",
-        "coach": "your team's coach",
-        "numberOfPlayers": 0
-    }
-]
+{
+  "id": 6,
+  "teamName": "New Jersey Devils",
+  "headquarters": "Newark, NJ",
+  "mascot": "NJ Devil",
+  "winLossRatio": "0-0-0",
+  "coach": "Lindy Ruff",
+  "numberOfPlayers": 23
+}
 ```
 
 The response should look like:
 
 ```js
-[
-    {
-        "id": 9,
-        "teamName": "your team name",
-        "headquarters": "your city and state",
-        "mascot": "the name of your mascot",
-        "winLossRatio": "0-0-0",
-        "coach": "your team's coach",
-        "numberOfPlayers": 0
-    }
-]
+{
+    "id": 6,
+    "teamName": "New Jersey Devils",
+    "headquarters": "Newark, NJ",
+    "mascot": "NJ Devil",
+    "winLossRatio": "0-0-0",
+    "coach": "Lindy Ruff",
+    "numberOfPlayers": 23
+}
 ```
 
 5. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
@@ -153,27 +149,20 @@ The response should look like:
 <a id="4"></a>
 ### Errors & Troubleshooting
 
-1. One error you may encounter in curl is:
+1. One error you may encounter is: `Error: Insert failed, duplicate id'
 
-```shell
-Error: Insert failed, duplicate id
-```
 This error occurs when you try to `POST` using a team `id` that already exists in the database.
-curl will not overwrite the existing entry.
 
 *To troubleshoot:* Review the list of teams in the database (do another `GET` call if needed) and find an `id` that is not already being used, preferably being the highest existing `id` +1.
-
-<span style="color:red">NOTE OF CAUTION:</span> This same error will not occur in Postman Desktop. Instead,
-if you post with a team `id` that is already in the database, it will overwrite the existing team's data. Doublecheck that you
-have a unique team `id` before creating your team.
 
 2. Other errors in curl often occur because of a mistyped command, including:
   - Forgetting to put a backslash after one of your lines of code
   - Using single quotes instead of backticks when delivering your json data
   - Mistyping the URL
   - Forgetting a comma after a field entry in your JSON data
+  - Other misc mis-formatting of commands and json payloads
 
-*To troubleshoot:* Recheck your entered command closely and look for these potential errors.
+*To troubleshoot:* Recheck your commands closely and look for potential errors.
 
 
 <a id="5"></a>
