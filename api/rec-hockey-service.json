@@ -155,6 +155,32 @@
           "finalScore": "TBD"
         }
       ]
+    },
+    {
+      "teamId": 5,
+      "teamName": "Seattle Kraken",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-03T19:00:00-08:00",
+          "homeGame": true,
+          "opposingTeam": "Vegas Golden Knights",
+          "locationName": "Climate Pledge Arena",
+          "locationAddress": "334 1st Ave N, Seattle, WA 98109",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-07T19:00:00-08:00",
+          "homeGame": false,
+          "opposingTeam": "Calgary Flames",
+          "locationName": "Scotiabank Saddledome",
+          "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+          "finalScore": "TBD"
+        }
+      ],
+      "id": 5
     }
   ]
 }

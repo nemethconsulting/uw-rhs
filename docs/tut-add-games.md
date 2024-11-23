@@ -23,101 +23,98 @@ curl and Postman Desktop
 <a id="2"></a>
 ## Add your games using curl
 
-1. Start with a `GET` call to see the list of current teams in the league database.
+1. Start by gathering the necessary data about your games. See our [games resource](res-games.md) guide for the necessary fields to make your call. If you don't have all data on hand, review our [Note on null or empty fields](tut-null-fields.md).
+
+2. Assume your team is assigned `id`=5 in the db (The new entry for the Seattle Kraken) and you want to add the first two season games to the schedule. Make the following `POST`.
 
 ```shell
-curl http://{base_url}/teams
+curl -X POST http://localhost:3000/games \
+-H "Content-Type: application/json" \
+-d '{
+  "teamId": 5,
+  "teamName": "Seattle Kraken",
+  "season": "2024-2025",
+  "seasonGames": [
+    {
+      "gameNumber": 1,
+      "date": "2024-10-03T19:00:00-08:00",
+      "homeGame": true,
+      "opposingTeam": "Vegas Golden Knights",
+      "locationName": "Climate Pledge Arena",
+      "locationAddress": "334 1st Ave N, Seattle, WA 98109",
+      "finalScore": "TBD"
+    },
+    {
+      "gameNumber": 2,
+      "date": "2024-10-07T19:00:00-08:00",
+      "homeGame": false,
+      "opposingTeam": "Calgary Flames",
+      "locationName": "Scotiabank Saddledome",
+      "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+      "finalScore": "TBD"
+    }
+  ]
+}'
 ```
 
 The output should look like:
 
 ```shell
-[
-  {
-    "id": 1,
-    "teamName": "Pittsburgh Penguins",
-    "headquarters": "Pittsburgh, PA",
-    "mascot": "Iceburgh",
-    "winLossRatio": "0-0-0",
-    "coach": "Mike Sullivan",
-    "numberOfPlayers": "17"
-  },
-  ...
-```
-
-2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty fields](tut-null-fields.md) to help guide your data entry.
-
-3. Review the list of teams and take note of the final team `id`. Your input for this field will be the highest team `id` +1. (In the example below, there are already 4 teams in the database, so a new team would take the `id` of 5).
-
-4. With your data on hand, make the following `POST` to the API.
-
-```shell
-curl -X POST http://{base_url}/teams \
--H "Content-Type: application/json" \
--d '{
-        "id": 5,
-        "teamName": "your team name",
-        "headquarters": "your city and state",
-        "mascot": "the name of your mascot",
-        "winLossRatio": "win-loss-OT loss",
-        "coach": "name of your coach",
-        "numberOfPlayers": 0
-        }'
-```
-
-A successful response will look like this:
-```shell
 {
-  "id": 5,
-  "teamName": "your team name",
-  "headquarters": "your city and state",
-  "mascot": "the name of your mascot",
-  "winLossRatio": "win-loss-OT loss",
-  "coach": "name of your coach",
-  "numberOfPlayers": 0
+  "teamId": 5,
+  "teamName": "Seattle Kraken",
+  "season": "2024-2025",
+  "seasonGames": [
+    {
+      "gameNumber": 1,
+      "date": "2024-10-03T19:00:00-08:00",
+      "homeGame": true,
+      "opposingTeam": "Vegas Golden Knights",
+      "locationName": "Climate Pledge Arena",
+      "locationAddress": "334 1st Ave N, Seattle, WA 98109",
+      "finalScore": "TBD"
+    },
+    {
+      "gameNumber": 2,
+      "date": "2024-10-07T19:00:00-08:00",
+      "homeGame": false,
+      "opposingTeam": "Calgary Flames",
+      "locationName": "Scotiabank Saddledome",
+      "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+      "finalScore": "TBD"
+    }
+  ],
+  "id": 5
 }
 ```
 
-5. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
+3. Use this method to add any additional games to the team's schedule. When a game is complete, use our [Update the score of a completed game](tut-add-score.md) tutorial to update the db.
 
 <a id="3"></a>
 ## Add your games using Postman Desktop
 
-1. Start with a `GET` call to see the list of current teams in the league database.
+1. Start by gathering the necessary data about your games. See our [games resource](res-games.md) guide for the necessary fields to make your call. If you don't have all data on hand, review our [Note on null or empty fields](tut-null-fields.md).
+
+2. Assume your team is assigned `id`=5 in the db (The new entry for the Seattle Kraken) and you want to add the first two season games to the schedule. Make the following `POST`. 
 
     * **METHOD**: POST
-    * **URL**: `{{base_url}}/teams`
+    * **URL**: `{{base_url}}/games`
     * **Headers**:
         * `Content-Type: application/json`
+    * **Request body**:
+        You can change the values of each property as needed.
+
+```js
+
+```
 
 The response should look like:
 
 ```js
-[
-    {
-        "id": 1,
-        "teamName": "Pittsburgh Penguins",
-        "headquarters": "Pittsburgh, PA",
-        "mascot": "Iceburgh",
-        "winLossRatio": "0-0-0",
-        "coach": "Mike Sullivan",
-        "numberOfPlayers": "17"
-    },
-  ...
+
 ```
 
-2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty fields](tut-null-fields.md) to help guide your data entry.
-
-3. Review the list of teams and take note of the highest team `id`. Your input for this field will the highest team `id` +1. (In the example below, there are already 8 teams in the database, so a new team would take the `id` of 9)
-
-4. With your data on hand, make the following `POST`.
-
-* **METHOD**: POST
-    * **URL**: `{{base_url}}/teams`
-    * **Headers**:
-        * `Content-Type: application/json`
-    * **Request body**:
-        You can change the values of each property as you'd like.
+2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty 
 
 ```js
 [
