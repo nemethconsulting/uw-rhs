@@ -14,8 +14,8 @@
 4. [Retrieve the league's win/loss records](tut-get-wins.md)
 
 ## API Reference Docs
-1. [games resource](res-games.md)
-2. [teams resource](res-teams.md)
+1. [teams resource](res-teams.md)
+2. [games resource](res-games.md)
 3. [stats resource](res-stats.md)  _Coming Soon_
 4. [roster resource](res-roster.md)  _Coming Soon_
 
