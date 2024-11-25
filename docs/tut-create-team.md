@@ -156,12 +156,12 @@ This error occurs when you try to `POST` using a team `id` that already exists i
 **To troubleshoot:** Review the list of teams in the database (do another `GET` call if needed) and find an `id` that is not already being used, preferably being the highest existing `id` +1.
 
 2. Other errors in curl often occur because of a mistyped command, including:
-    - Forgetting to put a backslash after one of your lines of code
+    - Forgetting to put a backslash after one of your lines of code in curl
     - Using single quotes instead of backticks when delivering your json data
     - Mistyping the URL
     - Forgetting a comma after a field entry in your JSON data
     - Other misc mis-formatting of commands and json payloads
-
+    
 **To troubleshoot:** Recheck your command closely and look for potential errors.
 
 
