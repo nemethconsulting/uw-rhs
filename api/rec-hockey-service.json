@@ -7,7 +7,7 @@
       "mascot": "Iceburgh",
       "winLossRatio": "0-0-0",
       "coach": "Mike Sullivan",
-      "numberOfPlayers": "17"
+      "numberOfPlayers": 17
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "mascot": "None",
       "winLossRatio": "0-0-0",
       "coach": "Peter Philip Laviolette Jr.",
-      "numberOfPlayers": "16"
+      "numberOfPlayers": 16
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "mascot": "Stormy the Ice Hog",
       "winLossRatio": "0-0-0",
       "coach": "Rod Brind'Amour",
-      "numberOfPlayers": "18"
+      "numberOfPlayers": 18
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "mascot": "Slapshot",
       "winLossRatio": "0-0-0",
       "coach": "Spencer Carbery",
-      "numberOfPlayers": "19"
+      "numberOfPlayers": 19
     },
     {
       "id": 5,
@@ -122,7 +122,7 @@
         },
         {
           "gameNumber": 2,
-          "date": "2024-10-11T19:30:00-05:00",
+          "date": "2024-10-13T19:30:00-05:00",
           "homeGame": false,
           "opposingTeam": "New Jersey Devils",
           "locationName": "Prudential Center",
@@ -147,7 +147,7 @@
         },
         {
           "gameNumber": 2,
-          "date": "2024-10-011T19:30:00-05:00",
+          "date": "2024-10-11T19:30:00-05:00",
           "homeGame": true,
           "opposingTeam": "Las Vegas Golden Knights",
           "locationName": "Capital One Arena",
@@ -156,3 +156,5 @@
         }
       ]
     }
+  ]
+}
