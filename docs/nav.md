@@ -11,7 +11,8 @@
 1. [Create an entry for your team](tut-create-team.md)
 2. [Add games to your team's calendar](tut-add-games.md)
 3. [Update the final score of a game](tut-add-score.md)
-4. [Retrieve the league's win/loss records](tut-retrieve-wlr.md)
+4. [Update your team's win/loss record](tut-update-winloss.md)
+5. [Retrieve the league's win/loss records](tut-retrieve-wlr.md)
 
 ## API Reference Docs
 1. [teams resource](res-teams.md)

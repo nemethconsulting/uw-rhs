@@ -1,5 +1,15 @@
+## Our API does not dynamically update fields
+...
 
+## `PATCH' calls
+Need all fields so as not to overwrite the data
+...
+
+## Nested Arrays w/ Top-Level Fields
+Won't update across resources
 Yes, what you're observing is indeed a limitation of json-server due to its behavior when handling nested resources (like seasonGames). When you use PATCH to update a nested field (seasonGames), json-server will replace the entire array and may not update sibling fields like winLossRatio correctly within the same PATCH request. This is because json-server treats each field in the resource independently, and it doesn't automatically merge changes between top-level fields and nested arrays.
+
+While it may seem easier to target only the relevant fields with a `PATCH` call like the one below, the `json-server` used with the API does not natively handle deep merging of objects or arrays. You need to send all fields of data in your request, or use middleware such as `mergePatch.js` to merge arrays and nested objects properly. 
 
 ```shell
 curl -X PATCH http://localhost:3000/games/5 \
