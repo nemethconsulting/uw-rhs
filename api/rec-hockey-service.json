@@ -16,7 +16,7 @@
       "mascot": "None",
       "winLossRatio": "0-0-0",
       "coach": "Peter Philip Laviolette Jr.",
-      "numberOfPlayers": 16
+      "numberOfPlayers": 17
     },
     {
       "id": 3,
@@ -184,11 +184,7 @@
     {
       "id": 6,
       "teamName": "New Jersey Devils",
-      "headquarters": "Newark, NJ",
-      "mascot": "NJ Devil",
-      "winLossRatio": "0-0-0",
-      "coach": "Lindy Ruff",
-      "numberOfPlayers": 23,
+      "season": "2024-2025",
       "seasonGames": [
         {
           "gameNumber": 1,
