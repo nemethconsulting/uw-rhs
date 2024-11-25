@@ -1,0 +1,210 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "teamName": "Pittsburgh Penguins",
+      "headquarters": "Pittsburgh, PA",
+      "mascot": "Iceburgh",
+      "winLossRatio": "0-0-0",
+      "coach": "Mike Sullivan",
+      "numberOfPlayers": 17
+    },
+    {
+      "id": 2,
+      "teamName": "New York Rangers",
+      "headquarters": "New York, NY",
+      "mascot": "None",
+      "winLossRatio": "0-0-0",
+      "coach": "Peter Philip Laviolette Jr.",
+      "numberOfPlayers": 16
+    },
+    {
+      "id": 3,
+      "teamName": "Carolina Hurricanes",
+      "headquarters": "Raleigh, NC",
+      "mascot": "Stormy the Ice Hog",
+      "winLossRatio": "0-0-0",
+      "coach": "Rod Brind'Amour",
+      "numberOfPlayers": 18
+    },
+    {
+      "id": 4,
+      "teamName": "Washington Capitals",
+      "headquarters": "Washington, D.C.",
+      "mascot": "Slapshot",
+      "winLossRatio": "0-0-0",
+      "coach": "Spencer Carbery",
+      "numberOfPlayers": 19
+    },
+    {
+      "id": 5,
+      "teamName": "Seattle Kraken",
+      "headquarters": "Seattle, WA",
+      "mascot": "Buoy the Troll",
+      "winLossRatio": "0-0-0",
+      "coach": "Dave Hakstol",
+      "numberOfPlayers": 23
+    },
+    {
+      "id": 6,
+      "teamName": "New Jersey Devils",
+      "headquarters": "Newark, NJ",
+      "mascot": "NJ Devil",
+      "winLossRatio": "0-0-0",
+      "coach": "Lindy Ruff",
+      "numberOfPlayers": 23
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "teamName": "Pittsburgh Penguins",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-08T19:30:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "New York Islanders",
+          "locationName": "PPG Paints Arena",
+          "locationAddress": "1001 Fifth Ave, Pittsburgh, PA 15219",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-10T19:30:00-06:00",
+          "homeGame": false,
+          "opposingTeam": "Detroit Red Wings",
+          "locationName": "Little Caesars Arena",
+          "locationAddress": "2645 Woodward Avenue, Detroit, MI 48201",
+          "finalScore": "TBD"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "teamName": "New York Rangers",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-12T19:30:00-05:00",
+          "homeGame": false,
+          "opposingTeam": "Pittsburgh Penguins",
+          "locationName": "PPG Paints Arena",
+          "locationAddress": "1001 Fifth Ave, Pittsburgh, PA 15219",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-14T19:30:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "Utah Hockey Club",
+          "locationName": "Madison Square Garden",
+          "locationAddress": "4 Penn Plaza, New York, NY 10121",
+          "finalScore": "TBD"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "teamName": "Carolina Hurricanes",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-11T19:30:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "Tampa Bay Lightning",
+          "locationName": "Lenovo Center",
+          "locationAddress": "1400 Edwards Mill Road, Raleigh, NC 27607",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-13T19:30:00-05:00",
+          "homeGame": false,
+          "opposingTeam": "New Jersey Devils",
+          "locationName": "Prudential Center",
+          "locationAddress": "25 Lafayette Street, Newark, NJ 07102",
+          "finalScore": "TBD"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "teamName": "Washington Capitals",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-08T19:30:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "New Jersey Devils",
+          "locationName": "Capital One Arena",
+          "locationAddress": "601 F St NW, Washington, DC 20004",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-11T19:30:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "Las Vegas Golden Knights",
+          "locationName": "Capital One Arena",
+          "locationAddress": "601 F St NW, Washington, DC 20004",
+          "finalScore": "TBD"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "teamName": "Seattle Kraken",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-03T19:00:00-08:00",
+          "homeGame": true,
+          "opposingTeam": "Vegas Golden Knights",
+          "locationName": "Climate Pledge Arena",
+          "locationAddress": "334 1st Ave N, Seattle, WA 98109",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-07T19:00:00-08:00",
+          "homeGame": false,
+          "opposingTeam": "Calgary Flames",
+          "locationName": "Scotiabank Saddledome",
+          "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+          "finalScore": "TBD"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "teamName": "New Jersey Devils",
+      "season": "2024-2025",
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "date": "2024-10-04T19:00:00-05:00",
+          "homeGame": true,
+          "opposingTeam": "Philadelphia Flyers",
+          "locationName": "Prudential Center",
+          "locationAddress": "25 Lafayette St, Newark, NJ 07102",
+          "finalScore": "TBD"
+        },
+        {
+          "gameNumber": 2,
+          "date": "2024-10-08T19:00:00-05:00",
+          "homeGame": false,
+          "opposingTeam": "New York Rangers",
+          "locationName": "Madison Square Garden",
+          "locationAddress": "4 Pennsylvania Plaza, New York, NY 10001",
+          "finalScore": "TBD"
+        }
+      ]
+    }
+  ]
+}
