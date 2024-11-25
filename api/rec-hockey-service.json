@@ -168,15 +168,15 @@
           "opposingTeam": "Vegas Golden Knights",
           "locationName": "Climate Pledge Arena",
           "locationAddress": "334 1st Ave N, Seattle, WA 98109",
-          "finalScore": "TBD"
+          "finalScore": "4-2"
         },
         {
           "gameNumber": 2,
-          "date": "2024-10-07T19:00:00-08:00",
+          "date": "2024-10-10T19:30:00-06:00",
           "homeGame": false,
-          "opposingTeam": "Calgary Flames",
-          "locationName": "Scotiabank Saddledome",
-          "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+          "opposingTeam": "Detroit Red Wings",
+          "locationName": "Little Caesars Arena",
+          "locationAddress": "2645 Woodward Avenue, Detroit, MI 48201",
           "finalScore": "TBD"
         }
       ]
@@ -193,7 +193,7 @@
           "opposingTeam": "Philadelphia Flyers",
           "locationName": "Prudential Center",
           "locationAddress": "25 Lafayette St, Newark, NJ 07102",
-          "finalScore": "TBD"
+          "finalScore": "5-2"
         },
         {
           "gameNumber": 2,
