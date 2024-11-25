@@ -1,16 +1,16 @@
-# Update the score of a completed game
+# Retrieve Win/Loss Ratios across the league
 
 In this tutorial:
 
-- You will learn how to update the `finalScore` field after a game is completed, using both
+- You will learn how to update a specific teams `winLossRatio`, using both
 curl and Postman Desktop
-- You will also learn how to both update and retrieve your team's `winLossRatio`
+- You will also learn how to retrieve  `winLossRatio`s for the entire league.
 - You will be introduced to some common errors and troubleshooting tips
 
 ## Table of Contents
 - [Prerequisites](#1)
-- [Update the score using curl](#2)
-- [Update the score using Postman Desktop](#3)
+- [Retrieve all win/loss records for the league using curl](#2)
+- [Retrieve all win/loss records for the league using Postman Desktop](#3)
 - [Errors & Troubleshooting](#4)
 - [Related Topics](#5)
 - [Back to Main Menu](nav.md)
@@ -22,7 +22,7 @@ curl and Postman Desktop
 - Make sure you've already added your team's schedule into the Rec Hockey Service. See [Add games to your team's calendar](tut-add-games.md) for assistance.
 
 <a id="2"></a>
-## Update the score using curl
+## Retrieve all win/loss records for the league
 
 1. You will need the `gameNumber` to make this `PATCH`. If you don't have it on hand, you can make a `GET` call to the games resource to find it.
 
@@ -106,7 +106,7 @@ The response should look like:
 4. As the season goes on, if you are looking to retrieve `winLossRatio`'s across the league, see our [Retrieve the league's win/loss records](tut-get-wins.md) tutorial.
 
 <a id="3"></a>
-## Update the score using Postman Desktop
+## Retrieve all win/loss records for the league using Postman Desktop
 
 1. Start with a `GET` call to see the list of current teams in the league database.
 
