@@ -184,7 +184,7 @@ Both curl and Postman Desktop will throw this error when you try to `POST` using
 **To troubleshoot:** If you receieve this error, do a `GET` call for your team's games and adjust your `gameNumber` for the new game accordingly.
 
 2. Other errors in curl often occur because of a mistyped command, including:
-    - Forgetting to put a backslash after one of your lines of code
+    - Forgetting to put a backslash after one of your lines of code in curl
     - Using single quotes instead of backticks when delivering your json data
     - Mistyping the URL
     - Forgetting a comma after a field entry in your JSON data
