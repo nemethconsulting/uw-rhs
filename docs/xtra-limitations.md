@@ -60,22 +60,7 @@
     -d '{ "winLossRatio": "2-1-0" }'
     ```
 
-## 5. No Validation for Unique or Consistent Fields
-- **Limitation**: json-server does not enforce uniqueness (e.g., duplicate `id` values) or consistency (e.g., valid `finalScore` formats).
-- **Workaround**:
-  - Add middleware to validate requests before they are processed.
-  - Example Middleware:
-    ```javascript
-    module.exports = (req, res, next) => {
-      const db = require('./db.json');
-      if (req.method === 'POST' && db.teams.some(team => team.id === req.body.id)) {
-        return res.status(400).json({ error: "Duplicate id detected" });
-      }
-      next();
-    };
-    ```
-
-## 6. Limited Support for Advanced Queries
+## 5. Limited Support for Advanced Queries
 - **Limitation**: json-server cannot handle complex queries (e.g., filtering nested fields or advanced search).
 - **Workaround**:
   - Use client-side filtering or extend json-server with custom middleware.
@@ -94,7 +79,18 @@
       }
     };
     ```
+## 6. Git Bash Issues with Multi-line JSON Payloads
 
+- **Limitation**: Git Bash sometimes struggles with multi-line JSON payloads, causing parsing errors when copying and pasting the `curl` command.
+- **Workaround**:
+  - Condense the JSON payload into a single line to avoid issues with line breaks.
+  - Example: 
+    ```bash
+    curl -X PATCH http://localhost:3000/games/5 \
+    -H "Content-Type: application/json" \
+    -d '{"id": 5, "teamName": "Seattle Kraken", "season": "2024-2025", "seasonGames": [{"gameNumber": 1, "date": "2024-10-03T19:00:00-08:00", "homeGame": true, "opposingTeam": "Vegas Golden Knights", "locationName": "Climate Pledge Arena", "locationAddress": "334 1st Ave N, Seattle, WA 98109", "finalScore": "5-3"}, {"gameNumber": 2, "date": "2024-10-07T19:00:00-08:00", "homeGame": false, "opposingTeam": "Calgary Flames", "locationName": "Scotiabank Saddledome", "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1", "finalScore": "2-1"}, {"gameNumber": null, "date": null, "homeGame": null, "opposingTeam": null, "locationName": null, "locationAddress": null, "finalScore": null}]}'
+    ```
+  - This ensures the entire JSON body is correctly interpreted by Git Bash and sent successfully to the server.
 
 
 ## Our API does not dynamically update fields
