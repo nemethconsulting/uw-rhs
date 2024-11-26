@@ -103,17 +103,21 @@ curl -X POST http://localhost:3000/teams \
 ```
 
 <a id="6"></a>
-### PATCH `/teams`
-Update specific fields of an existing team.
+### PATCH `/teams/{id}`
+Update the details of an existing team. Since the server does not support partial updates, the full team resource must be included in the request.
 
 #### Example Request
-
-```shell
+```bash
 curl -X PATCH http://localhost:3000/teams/5 \
 -H "Content-Type: application/json" \
 -d '{
+  "id": 5,
+  "teamName": "Seattle Kraken",
+  "headquarters": "Seattle, WA",
+  "mascot": "Buoy the Troll",
   "winLossRatio": "3-1-0",
-  "coach": "New Coach Name"
+  "coach": "New Coach Name",
+  "numberOfPlayers": 23
 }'
 ```
 
