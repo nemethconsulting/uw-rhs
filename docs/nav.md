@@ -22,5 +22,5 @@
 
 ## FAQ's and Troubleshooting
 1. [Limitations of our `json-server`](xtra-limitations.md)
-2. [Note on null or empty fields](xtra--null-fields.md)
+2. [Note on null or empty fields](xtra-null-fields.md)
 3. [Error codes and messages](xtra-errors.md)
