@@ -58,7 +58,7 @@ The output should look like:
 
 2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [Limitations](xtra-limitations.md) of our server.
 
-3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) docs.
+3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) reference docs.
 
 <a id="3"></a>
 ## Retrieve all win/loss records for the league using Postman Desktop
@@ -98,7 +98,7 @@ The response should look like:
 
 2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [Limitations](xtra-limitations.md) of our server.
 
-3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) docs.
+3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) reference docs.
 
 <a id="4"></a>
 ### Errors & Troubleshooting
