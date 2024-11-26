@@ -1,4 +1,7 @@
-# Use these links to discover more about the Rec Hockey League API
+<div style="display: flex; align-items: center;">
+  <img src="rhs-logo_1x1.jpeg" alt="Rec Hockey League Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+  <h1>Use these links to discover more about the Rec Hockey League API</h1>
+</div>
 
 ## Prerequisites
 1. [Set up](prerequisites.md) your system to call our API
