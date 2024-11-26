@@ -38,3 +38,102 @@ Since our `json-server` doesn't support returning specific fields, you'll need t
 You can then process this JSON data (e.g., with jq in a shell script) to extract only the teamName and winLossRatio.
 curl -X GET http://localhost:3000/teams \
 -H "Content-Type: application/json" | jq '[.[] | {teamName: .teamName, winLossRatio: .winLossRatio}]'
+
+
+
+# Limitations of json-server and Troubleshooting Approaches
+
+## 1. PATCH Replaces Entire Nested Arrays
+- **Limitation**: When updating a nested array (e.g., `seasonGames`) via a `PATCH` call, json-server replaces the entire array instead of merging changes with existing fields.
+- **Workaround**:
+  - Always include the full array in the `PATCH` request to avoid overwriting data.
+  - Example:
+    ```bash
+    curl -X PATCH http://localhost:3000/games/5 \
+    -H "Content-Type: application/json" \
+    -d '{
+      "seasonGames": [
+        {
+          "gameNumber": 1,
+          "finalScore": "4-2"
+        },
+        {
+          "gameNumber": 2,
+          "finalScore": "TBD"
+        }
+      ]
+    }'
+    ```
+
+## 2. PATCH Cannot Update Multiple Resources Simultaneously
+- **Limitation**: json-server does not support updating two different resources (e.g., `games` and `teams`) in the same `PATCH` call.
+- **Workaround**:
+  - Make separate `PATCH` calls for each resource.
+  - Example:
+    ```bash
+    # Update game score
+    curl -X PATCH http://localhost:3000/games/5 \
+    -H "Content-Type: application/json" \
+    -d '{ "seasonGames": [{ "gameNumber": 1, "finalScore": "4-2" }] }'
+
+    # Update winLossRatio
+    curl -X PATCH http://localhost:3000/teams/5 \
+    -H "Content-Type: application/json" \
+    -d '{ "winLossRatio": "1-1-0" }'
+    ```
+
+## 3. json-server Cannot Return Specific Fields
+- **Limitation**: json-server does not support querying specific fields (e.g., `teamName` and `winLossRatio`) in a single call.
+- **Workaround**:
+  - Retrieve all data and filter the results client-side.
+  - Example using `jq`:
+    ```bash
+    curl -X GET http://localhost:3000/teams | jq '[.[] | {teamName, winLossRatio}]'
+    ```
+
+## 4. Static Server Does Not Dynamically Update Fields
+- **Limitation**: json-server does not support dynamic updates (e.g., recalculating `winLossRatio` based on game results).
+- **Workaround**:
+  - Perform calculations client-side and send updated values back via a `PATCH` or `PUT` call.
+  - Example:
+    ```bash
+    # Calculate winLossRatio locally and update
+    curl -X PATCH http://localhost:3000/teams/5 \
+    -H "Content-Type: application/json" \
+    -d '{ "winLossRatio": "2-1-0" }'
+    ```
+
+## 5. No Validation for Unique or Consistent Fields
+- **Limitation**: json-server does not enforce uniqueness (e.g., duplicate `id` values) or consistency (e.g., valid `finalScore` formats).
+- **Workaround**:
+  - Add middleware to validate requests before they are processed.
+  - Example Middleware:
+    ```javascript
+    module.exports = (req, res, next) => {
+      const db = require('./db.json');
+      if (req.method === 'POST' && db.teams.some(team => team.id === req.body.id)) {
+        return res.status(400).json({ error: "Duplicate id detected" });
+      }
+      next();
+    };
+    ```
+
+## 6. Limited Support for Advanced Queries
+- **Limitation**: json-server cannot handle complex queries (e.g., filtering nested fields or advanced search).
+- **Workaround**:
+  - Use client-side filtering or extend json-server with custom middleware.
+  - Example Middleware for Specific Fields:
+    ```javascript
+    module.exports = (req, res, next) => {
+      if (req.method === 'GET' && req.path === '/teams') {
+        const fields = req.query._fields?.split(',') || [];
+        const db = require('./db.json');
+        const result = db.teams.map(team =>
+          fields.reduce((acc, field) => ({ ...acc, [field]: team[field] }), {})
+        );
+        res.json(result);
+      } else {
+        next();
+      }
+    };
+    ```
