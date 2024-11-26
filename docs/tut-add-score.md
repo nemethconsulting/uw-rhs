@@ -99,12 +99,14 @@ The output should look like:
 
 1. Start with a `GET` call to see the list of current games in the database. Export this to an external editor, update the relevant `finalScore` fields and return the entire JSON payload using a command like the one in step 2.
 
-2. Let's assume you are updating the score for the New Jersey Devils (team `id` = 6) after their first game against the Philadelphia Flyers. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNuber`:1 and send the entire dataset back in a `PATCH` call as follows:
+2. Let's assume you are updating the score for the New Jersey Devils (team `id` = 6) after their first game against the Philadelphia Flyers. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNumber`:1 and send the entire dataset back in a `PATCH` call as follows:
 
     * **METHOD**: PATCH
     * **URL**: `{{base_url}}/teams/6`
     * **Headers**:
         * `Content-Type: application/json`
+    * **Request body**:
+        You can change the values of each property as needed.
 
 ```json
 {
