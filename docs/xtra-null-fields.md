@@ -1,15 +1,17 @@
-## Note on null fields
+## Note on null fields and placeholder values
 
 When setting up your database, you may not have data for all the fields.
 You can handle this in a number of different ways depending on your personal
 preferences and the field data type.
 
-For Strings: Will accept "" or "TBD" for strings as well as null
+You can use the following values as placeholders for data you plan to update later:
 
-For Integers: Won't accept an empty value for integer, but will accept "" & null
+**For Strings:** `null`, `""` (empty string), and `"TBD"` are all acceptable placeholders; and empty field will not be accepted.
 
-For Boolean: will accept null or ""
+**For Integers:** `null`, `""` (empty string), and `"TBD"` are all acceptable placeholders; and empty field will not be accepted.
 
-basically, null, "", or "TBD" will work for all fields. Just can't leave any empty.
+**For Boolean:** `null`, `""` (empty string), and `"TBD"` are all acceptable placeholders; and empty field will not be accepted.
 
-If you pass a team id as null, json-server will automatically generate the id for you
+**For Arrays:** `null`, `""` (empty string), and `"TBD"` are all acceptable placeholders; and empty field will not be accepted.
+
+**NOTE** If you pass a team `id` as `null`, `json-server` will automatically generate the id for you
