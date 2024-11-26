@@ -1,3 +1,6 @@
+# Editing Notes
+  curl/json-server will create an 'id' for the team if the field is left out or labeled as null (in the former case, it appends the id to the bottom of the team resource array)
+
 # Create an entry for your team
 
 In this tutorial:
