@@ -5,7 +5,7 @@
       "teamName": "Pittsburgh Penguins",
       "headquarters": "Pittsburgh, PA",
       "mascot": "Iceburgh",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "2-0-0",
       "coach": "Mike Sullivan",
       "numberOfPlayers": 17
     },
@@ -14,16 +14,16 @@
       "teamName": "New York Rangers",
       "headquarters": "New York, NY",
       "mascot": "None",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "1-0-1",
       "coach": "Peter Philip Laviolette Jr.",
-      "numberOfPlayers": 17
+      "numberOfPlayers": 16
     },
     {
       "id": 3,
       "teamName": "Carolina Hurricanes",
       "headquarters": "Raleigh, NC",
       "mascot": "Stormy the Ice Hog",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "0-2-0",
       "coach": "Rod Brind'Amour",
       "numberOfPlayers": 18
     },
@@ -32,7 +32,7 @@
       "teamName": "Washington Capitals",
       "headquarters": "Washington, D.C.",
       "mascot": "Slapshot",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "2-0-0",
       "coach": "Spencer Carbery",
       "numberOfPlayers": 19
     },
@@ -41,7 +41,7 @@
       "teamName": "Seattle Kraken",
       "headquarters": "Seattle, WA",
       "mascot": "Buoy the Troll",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "1-1-0",
       "coach": "Dave Hakstol",
       "numberOfPlayers": 23
     },
@@ -50,7 +50,7 @@
       "teamName": "New Jersey Devils",
       "headquarters": "Newark, NJ",
       "mascot": "NJ Devil",
-      "winLossRatio": "0-0-0",
+      "winLossRatio": "1-1-0",
       "coach": "Lindy Ruff",
       "numberOfPlayers": 23
     }
@@ -168,16 +168,16 @@
           "opposingTeam": "Vegas Golden Knights",
           "locationName": "Climate Pledge Arena",
           "locationAddress": "334 1st Ave N, Seattle, WA 98109",
-          "finalScore": "4-2"
+          "finalScore": "5-3"
         },
         {
           "gameNumber": 2,
-          "date": "2024-10-10T19:30:00-06:00",
+          "date": "2024-10-07T19:00:00-08:00",
           "homeGame": false,
-          "opposingTeam": "Detroit Red Wings",
-          "locationName": "Little Caesars Arena",
-          "locationAddress": "2645 Woodward Avenue, Detroit, MI 48201",
-          "finalScore": "TBD"
+          "opposingTeam": "Calgary Flames",
+          "locationName": "Scotiabank Saddledome",
+          "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
+          "finalScore": "2-1"
         }
       ]
     },
@@ -193,7 +193,7 @@
           "opposingTeam": "Philadelphia Flyers",
           "locationName": "Prudential Center",
           "locationAddress": "25 Lafayette St, Newark, NJ 07102",
-          "finalScore": "5-2"
+          "finalScore": "5-3"
         },
         {
           "gameNumber": 2,
@@ -202,7 +202,7 @@
           "opposingTeam": "New York Rangers",
           "locationName": "Madison Square Garden",
           "locationAddress": "4 Pennsylvania Plaza, New York, NY 10001",
-          "finalScore": "TBD"
+          "finalScore": "3-0"
         }
       ]
     }

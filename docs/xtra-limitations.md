@@ -32,3 +32,9 @@ curl -X PATCH http://localhost:3000/games/5 \
   ]
 }'
 ```
+
+## Targeting retrieval of specific fields
+Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side.
+You can then process this JSON data (e.g., with jq in a shell script) to extract only the teamName and winLossRatio.
+curl -X GET http://localhost:3000/teams \
+-H "Content-Type: application/json" | jq '[.[] | {teamName: .teamName, winLossRatio: .winLossRatio}]'
