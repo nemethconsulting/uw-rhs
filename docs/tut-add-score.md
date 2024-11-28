@@ -7,12 +7,12 @@ curl and Postman Desktop
 - You will be introduced to some common errors and troubleshooting tips
 
 ## Table of Contents
-- [Prerequisites](#1)
-- [Update the score using curl](#2)
-- [Update the score using Postman Desktop](#3)
-- [Errors & Troubleshooting](#4)
-- [Related Topics](#5)
-- [Back to Main Menu](nav.md)
+1. [Prerequisites](#1)
+2. [Update the score using curl](#2)
+3. [Update the score using Postman Desktop](#3)
+4. [Errors & Troubleshooting](#4)
+5. [Related Topics](#5)
+6. [Back to Main Menu](nav.md)
 
 <a id="1"></a>
 ## Prerequisties
