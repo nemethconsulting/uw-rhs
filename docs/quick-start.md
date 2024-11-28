@@ -4,6 +4,17 @@ Find your favorite team and get their schedule!
 
 Once your system is [Set up](prerequisites.md), jump in and get started using our API.
 
+## Table of Contents
+1. [Before you start](#1)
+2. Using Curl
+  - [Find your team](#2)
+  - [Get your team's schedule](#3)
+3. Using Postman Desktop
+  - [Find your team](#4)
+  - [Get your team's schedule](#5)
+4. [Next steps](#6)
+
+<a id="1"></a>
 ## Before you start
 Make sure the server is running on your local machine
 
@@ -25,6 +36,7 @@ the service start and display the URL of the service: `http://localhost:3000`. Y
 
 ## Using curl
 
+<a id="2"></a>
 ### Find your team
 
 1. Locate your team with a simple GET call to the `teams` resource.
@@ -58,6 +70,7 @@ curl "http://localhost:3000/teams"
 
 3. Scan the returned list and find your team. Note their `teamId` for next steps.
 
+<a id="3"></a>
 ### Get your team's schedule
 1. Use another GET call to pull your team's schedule from the `games` resource.
 
@@ -98,6 +111,7 @@ $ curl "http://localhost:3000/games?{teamId=}"
 
 ## Using Postman Desktop
 
+<a id="4"></a>
 ### Find your team
 
 1. In the Postman app, create a new request with these values:
@@ -134,6 +148,7 @@ $ curl "http://localhost:3000/games?{teamId=}"
 ```
 4. Scan the returned list and find your team. Note their `teamId` for next steps.
 
+<a id="5"></a>
 ### Get your team's schedule
 
 1. In the Postman app, create a new request with these values:
@@ -173,6 +188,9 @@ $ curl "http://localhost:3000/games?{teamId=}"
 ...
 ```
 
-## Next Steps
+<a id="6"></a>
+## Next steps
 
 You've successfully started using our API! View the rest of our [docs](nav.md) to dive in deeper.
+
+## [Back to Main Menu](nav.md)
