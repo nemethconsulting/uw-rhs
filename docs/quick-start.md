@@ -7,12 +7,13 @@ Once your system is [Set up](prerequisites.md), jump in and get started using ou
 ## Table of Contents
 1. [Before you start](#1)
 2. Using Curl
-  - [Find your team](#2)
-  - [Get your team's schedule](#3)
+    - [Find your team](#2)
+    - [Get your team's schedule](#3)
 3. Using Postman Desktop
-  - [Find your team](#4)
-  - [Get your team's schedule](#5)
+    - [Find your team](#4)
+    - [Get your team's schedule](#5)
 4. [Next steps](#6)
+5. [Back to Main Menu](nav.md)
 
 <a id="1"></a>
 ## Before you start
