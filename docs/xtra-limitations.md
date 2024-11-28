@@ -3,16 +3,15 @@
 There are some limitations to the `json-server` used with this mock API. Review the details below to understnd the call and responses available in working with it.
 
 ## Table of Contents
-1. [Before you start](#1)
-2. Using Curl
-    - [Find your team](#2)
-    - [Get your team's schedule](#3)
-3. Using Postman Desktop
-    - [Find your team](#4)
-    - [Get your team's schedule](#5)
-4. [Next steps](#6)
-5. [Back to Main Menu](nav.md)
+1. [PATCH Replaces Entire Nested Arrays](#1)
+2. [PATCH Cannot Update Multiple Resources Simultaneously](#2)
+3. [json-server Cannot Return Specific Fields](3)
+4. [Static Server Does Not Dynamically Update Fields](#4)
+5. [Limited Support for Advanced Queries](#5)
+6. [Git Bash Issues with Multi-line JSON Payloads](#6)
+7. [Back to Main Menu](nav.md)
 
+<a id="1"></a>
 ## 1. PATCH Replaces Entire Nested Arrays
 - **Limitation**: When updating a nested array (e.g., `seasonGames`) via a `PATCH` call, json-server replaces the entire array instead of merging changes with existing fields.
 - **Workaround**:
@@ -35,6 +34,7 @@ There are some limitations to the `json-server` used with this mock API. Review 
     }'
     ```
 
+<a id="2"></a>
 ## 2. PATCH Cannot Update Multiple Resources Simultaneously
 - **Limitation**: json-server does not support updating two different resources (e.g., `games` and `teams`) in the same `PATCH` call.
 - **Workaround**:
@@ -52,6 +52,7 @@ There are some limitations to the `json-server` used with this mock API. Review 
     -d '{ "winLossRatio": "1-1-0" }'
     ```
 
+<a id="3"></a>
 ## 3. json-server Cannot Return Specific Fields
 - **Limitation**: json-server does not support querying specific fields (e.g., `teamName` and `winLossRatio`) in a single call.
 - **Workaround**:
@@ -61,6 +62,7 @@ There are some limitations to the `json-server` used with this mock API. Review 
     curl -X GET http://localhost:3000/teams | jq '[.[] | {teamName, winLossRatio}]'
     ```
 
+<a id="4"></a>
 ## 4. Static Server Does Not Dynamically Update Fields
 - **Limitation**: json-server does not support dynamic updates (e.g., recalculating `winLossRatio` based on game results).
 - **Workaround**:
@@ -73,6 +75,7 @@ There are some limitations to the `json-server` used with this mock API. Review 
     -d '{ "winLossRatio": "2-1-0" }'
     ```
 
+<a id="5"></a>
 ## 5. Limited Support for Advanced Queries
 - **Limitation**: json-server cannot handle complex queries (e.g., filtering nested fields or advanced search).
 - **Workaround**:
@@ -92,6 +95,8 @@ There are some limitations to the `json-server` used with this mock API. Review 
       }
     };
     ```
+
+<a id="6"></a>
 ## 6. Git Bash Issues with Multi-line JSON Payloads
 
 - **Limitation**: Git Bash sometimes struggles with multi-line JSON payloads, causing parsing errors when copying and pasting the `curl` command.
