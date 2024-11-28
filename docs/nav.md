@@ -8,7 +8,7 @@
 2. [Test](test-system.md) your set up
 
 ## Quick Start
-[Make your first call!](quick-start.md)
+  - [Make your first call!](quick-start.md)
 
 ## Tutorials for Common Use Cases
 1. [Create an entry for your team](tut-create-team.md)
