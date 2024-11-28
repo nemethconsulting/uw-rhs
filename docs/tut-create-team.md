@@ -1,6 +1,3 @@
-# Editing Notes
-  curl/json-server will create an 'id' for the team if the field is left out or labeled as null (in the former case, it appends the id to the bottom of the team resource array)
-
 # Create an entry for your team
 
 In this tutorial:
@@ -10,12 +7,12 @@ curl and Postman Desktop
 - You will be introduced to some common errors and troubleshooting tips
 
 ## Table of Contents
-- [Prerequisites](#1)
-- [Add your team using curl](#2)
-- [Add your team using Postman Desktop](#3)
-- [Errors & Troubleshooting](#4)
-- [Related Topics](#5)
-- [Back to Main Menu](nav.md)
+1. [Prerequisites](#1)
+2. [Add your team using curl](#2)
+3. [Add your team using Postman Desktop](#3)
+4. [Errors & Troubleshooting](#4)
+5. [Related Topics](#5)
+6. [Back to Main Menu](nav.md)
 
 <a id="1"></a>
 ## Prerequisties
@@ -24,6 +21,9 @@ curl and Postman Desktop
 
 <a id="2"></a>
 ## Add your team using curl
+
+### Editing Notes
+  curl/json-server will create an 'id' for the team if the field is left out or labeled as null (in the former case, it appends the id to the bottom of the team resource array)
 
 1. Start with a `GET` call to see the list of current teams in the league database.
 
