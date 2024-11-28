@@ -17,23 +17,8 @@ Once your system is [Set up](prerequisites.md), jump in and get started using ou
 
 <a id="1"></a>
 ## Before you start
-Make sure the server is running on your local machine
 
-1. Create and checkout a test branch of your fork of the rec-hockey-service repo. Your `GitHub repo workspace` is the directory that contains your fork of the `uw-rhs` repo.
-
-    ```shell
-    cd <your GitHub repo workspace // delete angle brackets>
-    ls
-    # (see the uw-rhs directory in the list)
-    cd uw-rhs
-    git checkout -b -<your working branch // delete angle brackets>
-    ls
-    cd api
-    sh start-server.sh
-    ```
-
-2. If your development system is installed correctly, you should see
-the service start and display the URL of the service: `http://localhost:3000`. You are ready to start making calls.
+Make sure the server is running on your local machine. If you need assistance with this, review our [Set up your system](prerequisites.md) and [Test your set up](test-system.md) docs.
 
 ## Using curl
 
