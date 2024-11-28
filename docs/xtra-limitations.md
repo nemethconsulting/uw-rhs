@@ -1,5 +1,18 @@
 # Limitations of json-server and Troubleshooting Approaches
 
+There are some limitations to the `json-server` used with this mock API. Review the details below to understnd the call and responses available in working with it.
+
+## Table of Contents
+1. [Before you start](#1)
+2. Using Curl
+    - [Find your team](#2)
+    - [Get your team's schedule](#3)
+3. Using Postman Desktop
+    - [Find your team](#4)
+    - [Get your team's schedule](#5)
+4. [Next steps](#6)
+5. [Back to Main Menu](nav.md)
+
 ## 1. PATCH Replaces Entire Nested Arrays
 - **Limitation**: When updating a nested array (e.g., `seasonGames`) via a `PATCH` call, json-server replaces the entire array instead of merging changes with existing fields.
 - **Workaround**:
@@ -92,5 +105,4 @@
     ```
   - This ensures the entire JSON body is correctly interpreted by Git Bash and sent successfully to the server.
 
-
-
+## [Back to Main Menu](nav.md)
