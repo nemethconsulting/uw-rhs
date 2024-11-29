@@ -1,4 +1,8 @@
-# Error Codes and Troubleshooting Steps for the Recreational Hockey League API
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Error Codes and Troubleshooting Steps for the Recreational Hockey League API
+</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 Review this page to see causes and fixes for common error codes.
 

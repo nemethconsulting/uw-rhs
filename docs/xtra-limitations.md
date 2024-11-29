@@ -1,4 +1,7 @@
-# Limitations of json-server and Troubleshooting Approaches
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Limitations of json-server and Troubleshooting Approaches</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 There are some limitations to the `json-server` used with this mock API. Review the details below to understnd the call and responses available in working with it.
 

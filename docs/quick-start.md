@@ -1,4 +1,7 @@
-# Rec Hockey League API Quick Start
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Rec Hockey League API Quick Start</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 Find your favorite team and get their schedule!
 
