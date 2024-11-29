@@ -1,4 +1,7 @@
-# Add games to your team's schedule
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Add games to your team's schedule</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 In this tutorial:
 

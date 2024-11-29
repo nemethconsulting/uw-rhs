@@ -1,4 +1,7 @@
-# Prerequisites for interacting with our API
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Prerequisites for interacting with our API</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 These are the steps you must take before you can call the **rec-hockey-service**.
 

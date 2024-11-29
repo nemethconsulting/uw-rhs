@@ -1,6 +1,6 @@
 <div style="display: flex; align-items: center; justify-content: space-between;">
   <h1>Use these links to discover more about the Rec Hockey League API</h1>
-  <img src="rhs-logo_1x1.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
 ## Prerequisites
@@ -23,7 +23,7 @@
 3. [stats resource](res-stats.md)  _Coming Soon_
 4. [roster resource](res-roster.md)  _Coming Soon_
 
-## FAQ's and Troubleshooting
+## FAQs and Troubleshooting
 1. [Limitations of our `json-server`](xtra-limitations.md)
 2. [Note on null or empty fields](xtra-null-fields.md)
 3. [Error codes and messages](xtra-errors.md)

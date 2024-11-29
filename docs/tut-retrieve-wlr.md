@@ -1,4 +1,7 @@
-# Retrieve Win/Loss Ratios across the league
+<div style="display: flex; align-items: center; justify-content: space-between;">
+  <h1>Retrieve win/loss ratios across the league</h1>
+  <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
+</div>
 
 In this tutorial:
 
