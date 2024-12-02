@@ -36,7 +36,7 @@ The `games` resource manages information about your team's hockey schedule, incl
 | `opposingTeam`  | String   | Yes      | Name of the opposing team.                         | `"Vegas Golden Knights"`    |
 | `locationName`  | String   | Yes      | Name of the venue where the game is held.          | `"Climate Pledge Arena"`    |
 | `locationAddress`| String  | Yes      | Address of the venue.                              | `"334 1st Ave N, Seattle, WA 98109"`|
-| `finalScore`    | String   | No       | Final score of the game in `X-Y` format or `"TBD"`. | `"4-2"`                     |
+| `finalScore`    | String   | No       | Final score of the game in `X-Y` format.           | `"4-2"`                     |
 
 <a id="3"></a>
 ## Operations
