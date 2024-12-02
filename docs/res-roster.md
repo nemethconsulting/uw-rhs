@@ -7,4 +7,4 @@
 
 A resource that provides properties to capture data such as player names, positions, points, and more.
 
-## [Back to Main Menu](nav.md)
+### [Back to Main Menu](nav.md)
