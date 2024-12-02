@@ -35,7 +35,7 @@ Sample `teams` resource
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
   "winLossRatio": "3-1-0",
-  "coach": "Dave Hakstol",
+  "coach": "Dan Bylsma",
   "numberOfPlayers": 23
 }
 ```
