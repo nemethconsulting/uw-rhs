@@ -21,7 +21,7 @@ curl and Postman Desktop
 ## Prerequisties
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
-- Make sure you've first created a team entry in the Rec Hockey Service. See [Create an entry for your team](tut-create-team.md) for assistance.
+- Make sure you've first created a team entry in the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
 
 <a id="2"></a>
 ## Add your games using curl
@@ -30,8 +30,8 @@ curl and Postman Desktop
 
 2. Assume your team is assigned `id`=5 in the db (The new entry for the Seattle Kraken) and you want to add the first two season games to the schedule. Make the following `POST`.
 
-```shell
-curl -X POST http://localhost:3000/games \
+```bash
+curl -X POST {base_url}/games \
 -H "Content-Type: application/json" \
 -d '{
   "id": 5,
@@ -60,9 +60,9 @@ curl -X POST http://localhost:3000/games \
 }'
 ```
 
-The output should look like:
+The response should look like:
 
-```shell
+```bash
 {
   "id": 5,
   "teamName": "Seattle Kraken",
@@ -179,14 +179,14 @@ The response should look like:
 
 1. One error you may encounter is:
 
-```shell
+```bash
 Error: Insert failed, duplicate id
 ```
 Both curl and Postman Desktop will throw this error when you try to `POST` using a  `gameNumber` that already exists. 
 
 **To troubleshoot:** If you receieve this error, do a `GET` call for your team's games and adjust your `gameNumber` for the new game accordingly.
 
-2. Other errors in curl often occur because of a mistyped command, including:
+2. Other errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
     - Using single quotes instead of backticks when delivering your json data
     - Mistyping the URL

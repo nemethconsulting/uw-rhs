@@ -103,7 +103,12 @@ The response should look like:
 <a id="4"></a>
 ### Errors & Troubleshooting
 
-1. One error you may encounter is: `Error: Insert failed, duplicate id` This error occurs when you try to `POST` using a team `id` that already exists in the database.
+1. One error you may encounter is:
+
+```bash
+Error: Insert failed, duplicate id
+```
+Both curl and Postman Desktop will throw this error when you try to `POST` using a team `id` that already exists in the database.
 
 **To troubleshoot:** Do a `GET` call to review all teams in the db and find an `id` that is not already being used, preferably being the highest existing `id` +1. Or set your `id` field to `null` and the API will assign an `id` for you.
 
