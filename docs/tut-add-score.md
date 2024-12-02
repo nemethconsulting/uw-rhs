@@ -21,7 +21,7 @@ curl and Postman Desktop
 ## Prerequisties
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
-- Make sure you've already added your team's schedule into the Rec Hockey Service. See [Add games to your team's calendar](tut-add-games.md) for assistance.
+- Make sure you've already added your team's schedule into the Rec Hockey Service API. See [Add games to your team's calendar](tut-add-games.md) for assistance.
 
 <a id="2"></a>
 ## Update the score using curl
@@ -30,8 +30,8 @@ curl and Postman Desktop
 
 2. Let's assume you are updating the score for the Seattle Kraken (team `id` = 5) after their first game against the Vegas Godlen Knights. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNuber`:1 and send the entire dataset back in a `PATCH` call as follows:
 
-```shell
-curl -X PATCH http://localhost:3000/games/5 \
+```bash
+curl -X PATCH {base_url}/games/5 \
 -H "Content-Type: application/json" \
 -d '{
   "id": 5,
@@ -61,9 +61,9 @@ curl -X PATCH http://localhost:3000/games/5 \
 
 ```
 
-The output should look like:
+The response should look like:
 
-```shell
+```bash
 {
   "id": 5,
   "teamName": "Seattle Kraken",
@@ -105,7 +105,7 @@ The output should look like:
 2. Let's assume you are updating the score for the New Jersey Devils (team `id` = 6) after their first game against the Philadelphia Flyers. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNumber`:1 and send the entire dataset back in a `PATCH` call as follows:
 
     * **METHOD**: PATCH
-    * **URL**: `{{base_url}}/teams/6`
+    * **URL**: `{base_url}/teams/6`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -176,13 +176,13 @@ The response should look like:
 <a id="4"></a>
 ### Errors & Troubleshooting
 
-1. Note on proper data entry the `finalScore` field:
-Ensure that the homeGame property aligns with the score order:
+1. **Note** on proper data entry the `finalScore` field:
+Ensure that the `homeGame` property aligns with the score order:
 
   - If "homeGame": true, the first score in "finalScore" belongs to the team in the teamName field (e.g., Seattle Kraken).
   - If "homeGame": false, the first score belongs to the opposingTeam.
 
-2. Other errors in often occur because of a mistyped command, including:
+2. Other errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
     - Using single quotes instead of backticks when delivering your json data
     - Mistyping the URL

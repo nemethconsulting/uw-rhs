@@ -21,7 +21,7 @@ curl and Postman Desktop
 ## Prerequisties
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
-- Make sure you've already added your team details into the Rec Hockey Service. See [Create an entry for your team](tut-create-team.md) for assistance.
+- Make sure you've already added your team details into the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
 
 <a id="2"></a>
 ## Update the `winLossRatio` using curl
@@ -30,8 +30,8 @@ curl and Postman Desktop
 
 2. Let's assume you are updating the `winLossRatio` for the Seattle Kraken (team `id` = 5) after losing their second game against the Calgary Flames (They won their first game). After updating the `winLossRatio` field, send the following `PATCH` call:
 
-```shell
-curl -X PATCH http://localhost:3000/teams/5 \
+```bash
+curl -X PATCH {base_url}/teams/5 \
 -H "Content-Type: application/json" \
 -d '{
   "id": 5,
@@ -44,9 +44,9 @@ curl -X PATCH http://localhost:3000/teams/5 \
 }'
 ```
 
-The output should look like:
+The response should look like:
 
-```shell
+```bash
 {
   "id": 5,
   "teamName": "Seattle Kraken",
@@ -62,7 +62,7 @@ The output should look like:
 
 4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
-5. As the season progresses, you may want to retrieve the `winLossRatio`s for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
+5. As the season progresses, you may want to retrieve the `winLossRatio` for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
 
 <a id="3"></a>
 ## Update the score using Postman Desktop
@@ -72,7 +72,7 @@ The output should look like:
 2. Let's assume you are updating the `winLossRatio` for the New Jersey (team `id` = 6) after losing their second game against the New York Rangers (They won their first game). After updating the `winLossRatio` field, send the following `PATCH` call:
 
     * **METHOD**: PATCH
-    * **URL**: `{{base_url}}/teams/6`
+    * **URL**: `{base_url}/teams/6`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
@@ -108,7 +108,7 @@ The response should look like:
 
 4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
-5. As the season progresses, you may want to retrieve the `winLossRatio`s for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
+5. As the season progresses, you may want to retrieve the `winLossRatio` for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
 
 <a id="4"></a>
 ### Errors & Troubleshooting
