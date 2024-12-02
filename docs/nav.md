@@ -24,7 +24,7 @@
 4. [roster resource](res-roster.md)  _Coming Soon_
 
 ## FAQs and Troubleshooting
-1. [{base_url}](xtra-base.md)
+1. [Note on `{base_url}`](xtra-base.md)
 2. [Limitations of our `json-server`](xtra-limitations.md)
 3. [Note on null or empty fields](xtra-null-fields.md)
 4. [Error codes and messages](xtra-errors.md)
