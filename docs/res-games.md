@@ -8,7 +8,7 @@ The `games` resource manages information about your team's hockey schedule, incl
 
 ## Table of Contents
 1. [Base URL](#1)
-2. [Fields](#2)
+2. [Resource Properties](#2)
 3. [Operations](#3)
     - [GET](#4)
     - [POST](#5)
@@ -22,7 +22,37 @@ The `games` resource manages information about your team's hockey schedule, incl
 `/games`
 
 <a id="2"></a>
-## Fields
+## Resource Properties
+
+Sample `games` resource
+
+```json
+{
+  "id": 6,
+  "teamName": "New Jersey Devils",
+  "season": "2024-2025",
+  "seasonGames": [
+    {
+      "gameNumber": 1,
+      "date": "2024-10-04T19:00:00-05:00",
+      "homeGame": true,
+      "opposingTeam": "Philadelphia Flyers",
+      "locationName": "Prudential Center",
+      "locationAddress": "25 Lafayette St, Newark, NJ 07102",
+      "finalScore": "TBD"
+    },
+    {
+      "gameNumber": 2,
+      "date": "2024-10-08T19:00:00-05:00",
+      "homeGame": false,
+      "opposingTeam": "New York Rangers",
+      "locationName": "Madison Square Garden",
+      "locationAddress": "4 Pennsylvania Plaza, New York, NY 10001",
+      "finalScore": "TBD"
+    }
+  ]
+}
+```
 
 | Field Name      | Type     | Required | Description                                         | Example Value               |
 |------------------|----------|----------|-----------------------------------------------------|-----------------------------|
@@ -43,16 +73,18 @@ The `games` resource manages information about your team's hockey schedule, incl
 
 <a id="4"></a>
 ### GET `/games/{id}`
+
 Retrieve a team's schedule (or all teams' schedules if an `id` is not specified).
 
 #### Example Request
+
 ```bash
-curl -X GET http://localhost:3000/games
+curl -X GET {base_url}/games/5
 ```
 
 #### Example Response
 
-```shell
+```json
 [
   {
     "id": 5,
@@ -83,13 +115,14 @@ curl -X GET http://localhost:3000/games
 ```
 
 ### POST '/games/{id}`
+
 Add a new team's schedule
 
 <a id="5"></a>
 #### Example Request
 
-```
-curl -X POST http://localhost:3000/games \
+```bash
+curl -X POST {base_url}/games \
 -H "Content-Type: application/json" \
 -d '{
   "id": 6,
@@ -120,7 +153,7 @@ curl -X POST http://localhost:3000/games \
 
 #### Example Response
 
-```
+```json
 {
   "id": 6,
   "teamName": "New Jersey Devils",
@@ -150,13 +183,15 @@ curl -X POST http://localhost:3000/games \
 
 <a id="6"></a>
 ### PATCH `/games`
+
 Update specific fields in a team's game schedule.
+
 Replaces the entire schedule for the team specified by id. Partial updates to the seasonGames array are not supported.
 
 #### Example Request
 
-```
-curl -X PATCH http://localhost:3000/games/5 \
+```bash
+curl -X PATCH {base_url}/games/5 \
 -H "Content-Type: application/json" \
 -d '{
   "id": 5,
@@ -180,15 +215,6 @@ curl -X PATCH http://localhost:3000/games/5 \
       "locationName": "Scotiabank Saddledome",
       "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
       "finalScore": "TBD"
-    },
-    {
-      "gameNumber": 3,
-      "date": "2024-10-15T19:00:00-08:00",
-      "homeGame": true,
-      "opposingTeam": "Edmonton Oilers",
-      "locationName": "Climate Pledge Arena",
-      "locationAddress": "334 1st Ave N, Seattle, WA 98109",
-      "finalScore": "TBD"
     }
   ]
 }'
@@ -196,7 +222,7 @@ curl -X PATCH http://localhost:3000/games/5 \
 
 #### Example Response
 
-```
+```json
 {
   "id": 5,
   "teamName": "Seattle Kraken",
@@ -219,15 +245,6 @@ curl -X PATCH http://localhost:3000/games/5 \
       "locationName": "Scotiabank Saddledome",
       "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
       "finalScore": "TBD"
-    },
-    {
-      "gameNumber": 3,
-      "date": "2024-10-15T19:00:00-08:00",
-      "homeGame": true,
-      "opposingTeam": "Edmonton Oilers",
-      "locationName": "Climate Pledge Arena",
-      "locationAddress": "334 1st Ave N, Seattle, WA 98109",
-      "finalScore": "TBD"
     }
   ]
 }
@@ -235,23 +252,26 @@ curl -X PATCH http://localhost:3000/games/5 \
 
 <a id="7"></a>
 ### DELETE `/games/{id}`
-Remove the entire schedule for a team
+
+Remove the entire schedule for a team.
+
 Deletes the schedule for the specified team, including all nested seasonGames.
 
 #### Example Request
 
-```
-curl -X DELETE http://localhost:3000/games/5
+```bash
+curl -X DELETE {base_url}/games/5
 ```
 
 #### Example Response
 
-```
+```json
 {}
 ```
 
 <a id="8"></a>
 ## Error Codes 
+
 See our [Error Codes](xtra-errors.md) doc for guidance and troubleshooting
 
-## [Back to Main Menu](nav.md)
+### [Back to Main Menu](nav.md)
