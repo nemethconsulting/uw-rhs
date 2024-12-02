@@ -20,11 +20,11 @@ Review this page to see causes and fixes for common error codes.
 
 <a id="1"></a>
 ## 400: Bad Request
-- **What It Means**: The request is malformed (e.g., missing required fields, invalid JSON syntax).
-- **Example**: Posting a team without a required `id` field.
+- **What It Means**: The request is malformed (e.g., invalid JSON syntax or missing punctuation).
+- **Example**: Posting a team with incorrect JSON, such as missing a comma between fields.
 - **Troubleshooting**: 
-  - Check the JSON structure and ensure all required fields are present.
-  - Validate with an online JSON validator.
+  - Check the JSON structure for syntax errors, such as missing commas, brackets, or quotes.
+  - Validate the payload using an online JSON validator like [JSONLint](https://jsonlint.com) to ensure correctness.
 
 <a id="2"></a>
 ## 404: Not Found
@@ -90,4 +90,4 @@ Review this page to see causes and fixes for common error codes.
   - Reduce the size of the payload by batching the data into smaller requests.
   - Check the server's payload size limits and adjust configuration if possible.
 
-## [Back to Main Menu](nav.md)
+### [Back to Main Menu](nav.md)
