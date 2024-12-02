@@ -208,30 +208,7 @@
       "seasonGames": [
         {
           "gameNumber": 1,
-          "date": "2024-10-03T19:00:00-08:00",
-          "homeGame": true,
-          "opposingTeam": "Vegas Golden Knights",
-          "locationName": "Climate Pledge Arena",
-          "locationAddress": "334 1st Ave N, Seattle, WA 98109",
-          "finalScore": "5-3"
-        },
-        {
-          "gameNumber": 2,
-          "date": "2024-10-07T19:00:00-08:00",
-          "homeGame": false,
-          "opposingTeam": "Calgary Flames",
-          "locationName": "Scotiabank Saddledome",
-          "locationAddress": "555 Saddledome Rise SE, Calgary, AB T2G 2W1",
-          "finalScore": "2-1"
-        },
-        {
-          "gameNumber": null,
-          "date": null,
-          "homeGame": null,
-          "opposingTeam": null,
-          "locationName": null,
-          "locationAddress": null,
-          "finalScore": null
+          "finalScore": "6-2"
         }
       ]
     },
