@@ -5,7 +5,7 @@
 
 In this tutorial:
 
-- You learn how to retrieve  `winLossRatio`s for the entire league.
+- You will learn how to retrieve the `winLossRatio` for the entire league.
 - You will be introduced to some common errors and troubleshooting tips
 
 ## Table of Contents
@@ -20,21 +20,21 @@ In this tutorial:
 ## Prerequisties
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
-- Make sure you've already added all team details into the Rec Hockey Service. See [Create an entry for your team](tut-create-team.md) for assistance.
+- Make sure you've already added all team details into the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
 
 <a id="2"></a>
-## Retrieve all win/loss records for the league
+## Retrieve all win/loss records for the league using curl
 
 1. At various points in the season, you will want to see all teams' records to calculate standings. You can do this using a simple `GET` call.
 
-```shell
-curl -X GET http://localhost:3000/teams \
+```bash
+curl -X GET {base_url}/teams \
 -H "Content-Type: application/json"
 ```
 
-The output should look like:
+The response should look like:
 
-```shell
+```bash
 [
   {
     "id": 1,
@@ -69,7 +69,7 @@ The output should look like:
 1. At various points in the season, you will want to see all teams' records to calculate standings. You can do this using a simple `GET` call.
 
     * **METHOD**: GET
-    * **URL**: `{{base_url}}/teams`
+    * **URL**: `{base_url}/teams`
     * **Headers**:
         * `Content-Type: application/json
 
