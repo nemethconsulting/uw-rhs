@@ -3,10 +3,10 @@
   <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
-1. Create and checkout a branch of your clone of the rec-hockey-service repo. Your `GitHub repo workspace` 
+1. Create and checkout a test branch of your clone of the Rec Hockey League API repo. Your `GitHub repo workspace` 
 is the directory that contains your clone of the `uw-rhs` repo.
 
-    ```shell
+    ```bash
     cd <your GitHub repo workspace>
     ls
     # (see the uw-rhs directory in the list)
@@ -17,7 +17,7 @@ is the directory that contains your clone of the `uw-rhs` repo.
     ```
 
     If your development system is installed correctly, you should see
-    the service start and display the URL of the service: `http://localhost:3000`.
+    the service start and display the URL of the service, usually `http://localhost:3000`.
 
 2. Make a test call to the service.
 
@@ -50,7 +50,7 @@ is the directory that contains your clone of the `uw-rhs` repo.
   ...
 ```
 
-If you don't see the list of teams, or receive an error in any step
+- If you don't see the list of teams, or receive an error in any step
 of the procedure, investigate and correct the error before continuing.
 Some common situations that cause errors include:
 
@@ -59,6 +59,6 @@ Some common situations that cause errors include:
 3. A required software component didn't install correctly.
 4. A required software component isn't up-to-date.
 
-If you see the list of teams from the service, you're ready for the [Quick Start](quick-start.md).
+- If you see the list of teams from the service, you're ready for the [Quick Start](quick-start.md).
 
 ## [Back to Main Menu](nav.md)

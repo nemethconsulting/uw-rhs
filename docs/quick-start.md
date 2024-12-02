@@ -3,12 +3,12 @@
   <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
-Find your favorite team and get their schedule!
+Find your team and get their schedule!
 
-Once your system is [Set up](prerequisites.md) and [tested](test-system.md), jump in and get started using our API.
+Once your system is [set up](prerequisites.md) and [tested](test-system.md), jump in and get started using our API.
 
 ## Table of Contents
-2. Using Curl
+2. Using curl
     - [Find your team](#1)
     - [Get your team's schedule](#2)
 3. Using Postman Desktop
@@ -22,13 +22,14 @@ Once your system is [Set up](prerequisites.md) and [tested](test-system.md), jum
 <a id="1"></a>
 ### Find your team
 
-1. Locate your team with a simple GET call to the `teams` resource.
+1. Locate your team with a simple `GET` call to the `teams` resource.
 
-```shell
-curl "http://localhost:3000/teams"
+```bash
+curl {base_url}/teams"
 ```
-2. The returned data should look like:
-```shell
+2. The response should look like:
+
+```bash
 [
   {
     "teamId": 1,
@@ -51,18 +52,19 @@ curl "http://localhost:3000/teams"
   ...
 ```
 
-3. Scan the returned list and find your team. Note their `teamId` for next steps.
+3. Scan the returned list and find your team. Note their team `id` for next steps.
 
 <a id="2"></a>
 ### Get your team's schedule
-1. Use another GET call to pull your team's schedule from the `games` resource.
 
-```shell
-$ curl "http://localhost:3000/games?{teamId=}"
+1. Use another `GET` call to pull your team's schedule from the `games` resource.
+
+```bash
+$ curl {base_url}/games/{id}
 ```
-2. The returned data should look like:
+2. The response should look like:
 
-```shell
+```bash
 [
   {
     "teamId": 4,
@@ -99,13 +101,15 @@ $ curl "http://localhost:3000/games?{teamId=}"
 
 1. In the Postman app, create a new request with these values:
     * **METHOD**: GET
-    * **URL**: `http://localhost:3000/teams`
+    * **URL**: `{base_url}/teams`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
-        You can change the values of each property as you'd like.
-2. Choose **Send** to make the request.
-3. Watch for the response body, which should look something like this. 
+        You can change the values of each property as needed.
+
+2. Click **Send** to make the request.
+
+3. The response should look like:
 
 ```js
     [
@@ -129,20 +133,23 @@ $ curl "http://localhost:3000/games?{teamId=}"
     },
     ...
 ```
-4. Scan the returned list and find your team. Note their `teamId` for next steps.
+4. Scan the returned list and find your team. Note their team `id` for next steps.
 
 <a id="4"></a>
 ### Get your team's schedule
 
 1. In the Postman app, create a new request with these values:
     * **METHOD**: GET
-    * **URL**: `http://localhost:3000/games?teamId={teamId}
+    * **URL**: `{base_url}/games/{id}`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
-        You can change the values of each property as you'd like.
-2. Choose **Send** to make the request.
-3. Watch for the response body, which should look something like this. 
+        You can change the values of each property as needed.
+
+2. Click **Send** to make the request.
+
+3. The response should look like:
+
 ```js
 [
     {
@@ -174,6 +181,6 @@ $ curl "http://localhost:3000/games?{teamId=}"
 <a id="5"></a>
 ## Next steps
 
-You've successfully started using our API! View the rest of our [docs](nav.md) to dive in deeper.
+You've successfully started using the Rec Hockey League API! View the rest of our [docs](nav.md) to dive in deeper.
 
 ## [Back to Main Menu](nav.md)

@@ -5,7 +5,7 @@
 
 In this tutorial:
 
-- You will learn how to add a team to the Rec Hockey Service using both
+- You will learn how to add a team to the Rec Hockey Service API using both
 curl and Postman Desktop
 - You will be introduced to some common errors and troubleshooting tips
 
@@ -25,42 +25,15 @@ curl and Postman Desktop
 <a id="2"></a>
 ## Add your team using curl
 
-### Editing Notes
-  curl/json-server will create an 'id' for the team if the field is left out or labeled as null (in the former case, it appends the id to the bottom of the team resource array)
+1. Refer to the [teams resource](res-teams.md) doc for fields and values specific to this resource.
 
-1. Start with a `GET` call to see the list of current teams in the league database.
+2. Format your `POST` call as follows. By making the `id` field `null`, the API will assign your new team the next highest `id` in the database.
 
-```shell
-curl http://{base_url}/teams
-```
-
-The output should look like:
-
-```shell
-[
-  {
-    "id": 1,
-    "teamName": "Pittsburgh Penguins",
-    "headquarters": "Pittsburgh, PA",
-    "mascot": "Iceburgh",
-    "winLossRatio": "0-0-0",
-    "coach": "Mike Sullivan",
-    "numberOfPlayers": "17"
-  },
-  ...
-```
-
-2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty fields](tut-null-fields.md) to help guide your data entry.
-
-3. Review the list of teams and take note of the final team `id`. Your input for this field will be the highest team `id` +1. (In the example below, there are already 4 teams in the database, so a new team would take the `id` of 5).
-
-4. With your data on hand, make the following `POST` to the API.
-
-```shell
-curl -X POST http://localhost:3000/teams \
+```bash
+curl -X POST {base_url}/teams \
 -H "Content-Type: application/json" \
 -d '{
-  "id": 5,
+  "id": null,
   "teamName": "Seattle Kraken",
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
@@ -70,8 +43,8 @@ curl -X POST http://localhost:3000/teams \
 }'
 ```
 
-A successful response will look like this:
-```shell
+The response should look like:
+```bash
 {
       "id": 5,
       "teamName": "Seattle Kraken",
@@ -83,50 +56,25 @@ A successful response will look like this:
 }
 ```
 
-5. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
+3. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
 
 <a id="3"></a>
 ## Add your team using Postman Desktop
 
-1. Start with a `GET` call to see the list of current teams in the league database.
+1. Refer to the [teams resource](res-teams.md) doc for fields and values specific to this resource.
 
-    * **METHOD**: POST
-    * **URL**: `{{base_url}}/teams`
-    * **Headers**:
-        * `Content-Type: application/json`
-
-The response should look like:
-
-```js
-[
-    {
-        "id": 1,
-        "teamName": "Pittsburgh Penguins",
-        "headquarters": "Pittsburgh, PA",
-        "mascot": "Iceburgh",
-        "winLossRatio": "0-0-0",
-        "coach": "Mike Sullivan",
-        "numberOfPlayers": "17"
-    },
-  ...
-```
-
-2. Note the required fields and make sure you have the appropriate data for entry. If you do not have all the data, see [Note on null or empty fields](tut-null-fields.md) to help guide your data entry.
-
-3. Review the list of teams and take note of the highest team `id`. Your input for this field will the highest team `id` +1. (In the example below, there are already 5 teams in the database, so a new team would take the `id` of 6)
-
-4. With your data on hand, make the following `POST`.
+2. Format your `POST` call as follows. By making the `id` field `null`, the API will assign your new team the next highest `id` in the database.
 
 * **METHOD**: POST
     * **URL**: `{{base_url}}/teams`
     * **Headers**:
         * `Content-Type: application/json`
     * **Request body**:
-        You can change the values of each property as you'd like.
+        You can change the values of each property as needed.
 
 ```js
 {
-  "id": 6,
+  "id": null,
   "teamName": "New Jersey Devils",
   "headquarters": "Newark, NJ",
   "mascot": "NJ Devil",
@@ -150,18 +98,16 @@ The response should look like:
 }
 ```
 
-5. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
+3. With your team created, you can go ahead and start adding your [team's schedule](tut-add-games.md).
 
 <a id="4"></a>
 ### Errors & Troubleshooting
 
-1. One error you may encounter is: `Error: Insert failed, duplicate id'
+1. One error you may encounter is: `Error: Insert failed, duplicate id` This error occurs when you try to `POST` using a team `id` that already exists in the database.
 
-This error occurs when you try to `POST` using a team `id` that already exists in the database.
+**To troubleshoot:** Do a `GET` call to review all teams in the db and find an `id` that is not already being used, preferably being the highest existing `id` +1. Or set your `id` field to `null` and the API will assign an `id` for you.
 
-**To troubleshoot:** Review the list of teams in the database (do another `GET` call if needed) and find an `id` that is not already being used, preferably being the highest existing `id` +1.
-
-2. Other errors in curl often occur because of a mistyped command, including:
+2. Other errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
     - Using single quotes instead of backticks when delivering your json data
     - Mistyping the URL
