@@ -4,11 +4,12 @@
 </div>
 
 ## Overview
-The `teams` resource manages information about hockey teams, including their names, mascots, and statistics.
+
+The `teams` resource manages information about hockey teams, including their names, mascots, and win/loss records.
 
 ## Table of Contents
 1. [Base URL](#1)
-2. [Fields](#2)
+2. [Resource Properties](#2)
 3. [Operations](#3)
     - [GET](#4)
     - [POST](#5)
@@ -19,10 +20,25 @@ The `teams` resource manages information about hockey teams, including their nam
 
 <a id="1"></a>
 ## Base URL
+
 `/teams`
 
 <a id="2"></a>
-## Fields
+## Resource Properties
+
+Sample `teams` resource
+
+```json
+{
+  "id": 5,
+  "teamName": "Seattle Kraken",
+  "headquarters": "Seattle, WA",
+  "mascot": "Buoy the Troll",
+  "winLossRatio": "3-1-0",
+  "coach": "Dave Hakstol",
+  "numberOfPlayers": 23
+}
+```
 
 | Field Name      | Type     | Required | Description                           | Example Value       |
 |------------------|----------|----------|---------------------------------------|---------------------|
@@ -39,33 +55,35 @@ The `teams` resource manages information about hockey teams, including their nam
 
 <a id="4"></a>
 ### GET `/teams`
+
 Retrieve all teams.
 
 #### Example Request
-```shell
-curl -X GET http://localhost:3000/teams
+
+```bash
+curl -X GET {base_url}/teams
 ```
 
 #### Example Response
 
-```shell
+```json
 [
   {
-    "id": 5,
-    "teamName": "Seattle Kraken",
-    "headquarters": "Seattle, WA",
-    "mascot": "Buoy the Troll",
-    "winLossRatio": "2-1-0",
-    "coach": "Dave Hakstol",
-    "numberOfPlayers": 23
+    "id": 1,
+    "teamName": "Pittsburgh Penguins",
+    "headquarters": "Pittsburgh, PA",
+    "mascot": "Iceburgh",
+    "winLossRatio": "0-0-0",
+    "coach": "Mike Sullivan",
+    "numberOfPlayers": 20
   },
   {
-    "id": 6,
-    "teamName": "New Jersey Devils",
-    "headquarters": "Newark, NJ",
-    "mascot": "NJ Devil",
-    "winLossRatio": "3-0-0",
-    "coach": "Lindy Ruff",
+    "id": 2,
+    "teamName": "New York Rangers",
+    "headquarters": "New York, NY",
+    "mascot": "None",
+    "winLossRatio": "0-0-0",
+    "coach": "Peter Laviolette",
     "numberOfPlayers": 22
   },
   ...
@@ -74,88 +92,94 @@ curl -X GET http://localhost:3000/teams
 
 <a id="5"></a>
 ### POST `/teams`
+
 Add a new team
 
 #### Example Request
 
-```shell
-curl -X POST http://localhost:3000/teams \
--H "Content-Type: application/json" \
--d '{
-  "teamName": "Pittsburgh Penguins",
-  "headquarters": "Pittsburgh, PA",
-  "mascot": "Iceburgh",
-  "winLossRatio": "0-0-0",
-  "coach": "Mike Sullivan",
-  "numberOfPlayers": 21
-}'
-```
-
-#### Example Response
-
-```shell
-{
-  "id": 7,
-  "teamName": "Pittsburgh Penguins",
-  "headquarters": "Pittsburgh, PA",
-  "mascot": "Iceburgh",
-  "winLossRatio": "0-0-0",
-  "coach": "Mike Sullivan",
-  "numberOfPlayers": 21
-}
-```
-
-<a id="6"></a>
-### PATCH `/teams/{id}`
-Update the details of an existing team. Since the server does not support partial updates, the full team resource must be included in the request.
-
-#### Example Request
 ```bash
-curl -X PATCH http://localhost:3000/teams/5 \
+curl -X POST {base_url}/teams \
 -H "Content-Type: application/json" \
 -d '{
-  "id": 5,
-  "teamName": "Seattle Kraken",
-  "headquarters": "Seattle, WA",
-  "mascot": "Buoy the Troll",
-  "winLossRatio": "3-1-0",
-  "coach": "New Coach Name",
+  "id": null,
+  "teamName": "Los Angeles Kings",
+  "headquarters": "Los Angeles, CA",
+  "mascot": "Bailey the Lion",
+  "winLossRatio": "0-0-0",
+  "coach": "Todd McLellan",
   "numberOfPlayers": 23
 }'
 ```
 
 #### Example Response
 
-```shell
+```json
+{
+  "id": 10,
+  "teamName": "Los Angeles Kings",
+  "headquarters": "Los Angeles, CA",
+  "mascot": "Bailey the Lion",
+  "winLossRatio": "0-0-0",
+  "coach": "Todd McLellan",
+  "numberOfPlayers": 23
+}
+```
+
+<a id="6"></a>
+### PATCH `/teams/{id}`
+
+Update the details of an existing team. Since the server does not support partial updates, the full team resource must be included in the request.
+
+#### Example Request
+
+```bash
+curl -X PATCH {base_url}/teams/5 \
+-H "Content-Type: application/json" \
+-d '{
+  "id": 5,
+  "teamName": "Seattle Kraken",
+  "headquarters": "Seattle, WA",
+  "mascot": "Buoy the Troll",
+  "winLossRatio": "3-1-0",
+  "coach": "Dan Bylsma",
+  "numberOfPlayers": 23
+}'
+```
+
+#### Example Response
+
+```json
 {
   "id": 5,
   "teamName": "Seattle Kraken",
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
   "winLossRatio": "3-1-0",
-  "coach": "New Coach Name",
+  "coach": "Dan Bylsma",
   "numberOfPlayers": 23
 }
 ```
 
 <a id="7"></a>
 ### DELETE `/teams/{id}`
+
 Remove an existing team.
 
 #### Example Request
 
-```
-curl -X DELETE http://localhost:3000/teams/7
+```bash
+curl -X DELETE {base_url}/teams/7
 ```
 
 #### Example Response
 
-```
+```json
 {}
 ```
 
 <a id="8"></a>
 ## Error Codes 
+
 See our [Error Codes](xtra-errors.md) doc for guidance and troubleshooting
 
-## [Back to Main Menu](nav.md)
+### [Back to Main Menu](nav.md)

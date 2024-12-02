@@ -80,6 +80,15 @@
       "coach": null,
       "numberOfPlayers": "",
       "id": 9
+    },
+    {
+      "id": 10,
+      "teamName": "Los Angeles Kings",
+      "headquarters": "Los Angeles, CA",
+      "mascot": "Bailey the Lion",
+      "winLossRatio": "0-0-0",
+      "coach": "Todd McLellan",
+      "numberOfPlayers": 23
     }
   ],
   "games": [

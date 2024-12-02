@@ -62,7 +62,7 @@ curl -X POST {base_url}/games \
 
 The response should look like:
 
-```bash
+```json
 {
   "id": 5,
   "teamName": "Seattle Kraken",
@@ -110,11 +110,7 @@ The response should look like:
 {
   "id": 6,
   "teamName": "New Jersey Devils",
-  "headquarters": "Newark, NJ",
-  "mascot": "NJ Devil",
-  "winLossRatio": "0-0-0",
-  "coach": "Lindy Ruff",
-  "numberOfPlayers": 23,
+  "season": "2024-2025",
   "seasonGames": [
     {
       "gameNumber": 1,
@@ -140,15 +136,11 @@ The response should look like:
 
 The response should look like:
 
-```js
+```json
 {
     "id": 6,
     "teamName": "New Jersey Devils",
-    "headquarters": "Newark, NJ",
-    "mascot": "NJ Devil",
-    "winLossRatio": "0-0-0",
-    "coach": "Lindy Ruff",
-    "numberOfPlayers": 23,
+    "season": "2024-2025",
     "seasonGames": [
         {
             "gameNumber": 1,

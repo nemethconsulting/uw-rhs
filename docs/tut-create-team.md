@@ -38,7 +38,7 @@ curl -X POST {base_url}/teams \
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
   "winLossRatio": "0-0-0",
-  "coach": "Dave Hakstol",
+  "coach": "Dan Bylsma",
   "numberOfPlayers": 23
 }'
 ```
@@ -51,7 +51,7 @@ The response should look like:
       "headquarters": "Seattle, WA",
       "mascot": "Buoy the Troll",
       "winLossRatio": "0-0-0",
-      "coach": "Dave Hakstol",
+      "coach": "Dan Bylsma",
       "numberOfPlayers": 23
 }
 ```
