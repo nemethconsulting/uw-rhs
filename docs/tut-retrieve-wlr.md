@@ -59,7 +59,7 @@ The response should look like:
 
 ```
 
-2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [Limitations](xtra-limitations.md) of our server.
+2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [limitations](xtra-limitations.md) of our server.
 
 3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) reference docs.
 
@@ -99,7 +99,7 @@ The response should look like:
 ]
 ```
 
-2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [Limitations](xtra-limitations.md) of our server.
+2. Since our `json-server` doesn't support returning specific fields, you'll need to retrieve the entire teams resource and filter the response on the client side. See our doc for more on the [limitations](xtra-limitations.md) of our server.
 
 3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) reference docs.
 
