@@ -1,21 +1,21 @@
 <div style="display: flex; align-items: center; justify-content: space-between;">
-  <h1>Limitations of json-server and Troubleshooting Approaches</h1>
+  <h1>Limitations of json-server and troubleshooting approaches</h1>
   <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
 There are some limitations to the `json-server` used with this mock API. Review the details below to understand the call and responses available in working with it.
 
-## Table of Contents
-1. [PATCH Replaces Entire Nested Arrays](#1)
-2. [PATCH Cannot Update Multiple Resources Simultaneously](#2)
-3. [json-server Cannot Return Specific Fields](3)
-4. [Static Server Does Not Dynamically Update Fields](#4)
-5. [Limited Support for Advanced Queries](#5)
-6. [Git Bash Issues with Multi-line JSON Payloads](#6)
-7. [Back to Main Menu](nav.md)
+## Table of contents
+1. [PATCH replaces entire nested arrays](#1)
+2. [PATCH cannot update multiple resources simultaneously](#2)
+3. [json-server cannot return specific fields](3)
+4. [StaticsServer does not dynamically update fields](#4)
+5. [Limited support for advanced queries](#5)
+6. [Git Bash issues with multi-line JSON payloads](#6)
+7. [Back to main menu](nav.md)
 
 <a id="1"></a>
-## 1. PATCH Replaces Entire Nested Arrays
+## 1. PATCH replaces entire nested arrays
 
 - **Limitation**: When updating a nested array (e.g., `seasonGames`) via a `PATCH` call, json-server replaces the entire array instead of merging changes with existing fields.
 
@@ -55,7 +55,7 @@ curl -X PATCH {base_url}/games/5 \
 ```
 
 <a id="2"></a>
-## 2. PATCH Cannot Update Multiple Resources Simultaneously
+## 2. PATCH cannot update multiple resources simultaneously
 
 - **Limitation**: json-server does not support updating two different resources (e.g., `games` and `teams`) in the same `PATCH` call.
 
@@ -77,7 +77,7 @@ curl -X PATCH {base_url}/games/5 \
     ```
 
 <a id="4"></a>
-## 4. Static Server Does Not Dynamically Update Fields
+## 4. Static server does not dynamically update fields
 
 - **Limitation**: json-server does not support dynamic updates (e.g., recalculating `winLossRatio` based on game results).
 
@@ -85,7 +85,7 @@ curl -X PATCH {base_url}/games/5 \
   - Perform calculations client-side and send updated values back via a `PATCH` or `PUT` call.
 
 <a id="5"></a>
-## 5. Limited Support for Advanced Queries
+## 5. Limited support for advanced queries
 
 - **Limitation**: json-server cannot handle complex queries (e.g., filtering nested fields or advanced search).
 
@@ -93,7 +93,7 @@ curl -X PATCH {base_url}/games/5 \
   - Use client-side filtering or extend json-server with custom middleware.
 
 <a id="6"></a>
-## 6. Git Bash Issues with Multi-line JSON Payloads
+## 6. Git Bash issues with multi-line JSON payloads
 
 - **Limitation**: Git Bash sometimes struggles with multi-line JSON payloads, causing parsing errors when copying and pasting the `curl` command.
 
@@ -109,4 +109,4 @@ curl -X PATCH {base_url}/games/5 \
     ```
   - This ensures the entire JSON body is correctly interpreted by Git Bash and sent successfully to the server.
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)

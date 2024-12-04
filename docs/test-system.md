@@ -59,6 +59,6 @@ Some common situations that cause errors include:
 3. A required software component didn't install correctly.
 4. A required software component isn't up-to-date.
 
-- If you see the list of teams from the service, you're ready for the [Quick Start](quick-start.md).
+- If you see the list of teams from the service, you're ready for the [Quick start](quick-start.md).
 
-## [Back to Main Menu](nav.md)
+## [Back to main menu](nav.md)

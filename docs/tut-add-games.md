@@ -9,7 +9,7 @@ In this tutorial:
 curl and Postman Desktop
 - You will be introduced to some common errors and troubleshooting tips
 
-## Table of Contents
+## Table of contents
 1. [Prerequisites](#1)
 2. [Add your games using curl](#2)
 3. [Add your games using Postman Desktop](#3)

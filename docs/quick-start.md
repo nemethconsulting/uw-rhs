@@ -1,5 +1,5 @@
 <div style="display: flex; align-items: center; justify-content: space-between;">
-  <h1>Rec Hockey League API Quick Start</h1>
+  <h1>Rec Hockey League API quick start</h1>
   <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
@@ -7,7 +7,7 @@ Find your team and get their schedule!
 
 Once your system is [set up](prerequisites.md) and [tested](test-system.md), jump in and get started using our API.
 
-## Table of Contents
+## Table of contents
 2. Using curl
     - [Find your team](#1)
     - [Get your team's schedule](#2)
@@ -15,7 +15,7 @@ Once your system is [set up](prerequisites.md) and [tested](test-system.md), jum
     - [Find your team](#3)
     - [Get your team's schedule](#4)
 4. [Next steps](#5)
-5. [Back to Main Menu](nav.md)
+5. [Back to main menu](nav.md)
 
 ## Using curl
 
@@ -183,4 +183,4 @@ $ curl {base_url}/games/{id}
 
 You've successfully started using the Rec Hockey League API! View the rest of our [docs](nav.md) to dive in deeper.
 
-## [Back to Main Menu](nav.md)
+## [Back to main menu](nav.md)
