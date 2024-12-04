@@ -8,7 +8,7 @@ In this tutorial:
 - You will learn how to retrieve the `winLossRatio` for the entire league.
 - You will be introduced to some common errors and troubleshooting tips
 
-## Table of Contents
+## Table of contents
 1. [Prerequisites](#1)
 2. [Retrieve all win/loss records for the league using curl](#2)
 3. [Retrieve all win/loss records for the league using Postman Desktop](#3)

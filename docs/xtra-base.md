@@ -7,4 +7,4 @@ on the installation of the service.
 When run locally for testing, the `{base_url}` is
 generally `http://localhost:3000`.
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)

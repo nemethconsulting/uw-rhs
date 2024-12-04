@@ -1,12 +1,12 @@
 <div style="display: flex; align-items: center; justify-content: space-between;">
-  <h1>Games Resource</h1>
+  <h1>Games resource</h1>
   <img src="rhs-logo_4x4.jpeg" alt="Rec Hockey League Logo" style="width: 100px; height: 100px; margin-left: 20px;">
 </div>
 
 ## Overview
 The `games` resource manages information about your team's hockey schedule, including dates, locations, and final scores.
 
-## Table of Contents
+## Table of contents
 1. [Base URL](#1)
 2. [Resource properties](#2)
 3. [Operations](#3)

@@ -24,4 +24,4 @@ long-term support (LTS) version of the operating system.
 
 Once you have all these, you are ready to [Test your system](test-system.md)
 
-## [Back to Main Menu](nav.md)
+## [Back to main menu](nav.md)

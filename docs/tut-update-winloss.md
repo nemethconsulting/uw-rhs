@@ -9,7 +9,7 @@ In this tutorial:
 curl and Postman Desktop
 - You will be introduced to some common errors and troubleshooting tips
 
-## Table of Contents
+## Table of contents
 1. [Prerequisites](#1)
 2. [Update the `winLossRatio` using curl](#2)
 3. [Update the `winLossRatio` using Postman Desktop](#3)
