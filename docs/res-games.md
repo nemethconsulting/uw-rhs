@@ -8,21 +8,21 @@ The `games` resource manages information about your team's hockey schedule, incl
 
 ## Table of Contents
 1. [Base URL](#1)
-2. [Resource Properties](#2)
+2. [Resource properties](#2)
 3. [Operations](#3)
     - [GET](#4)
     - [POST](#5)
     - [PATCH](#6)
     - [DELETE](#7)
-4. [Error Codes](#8)
-5. [Back to Main Menu](nav.md)
+4. [Error codes](#8)
+5. [Back to main menu](nav.md)
 
 <a id="1"></a>
 ## Base URL
 `/games`
 
 <a id="2"></a>
-## Resource Properties
+## Resource properties
 
 Sample `games` resource
 
@@ -76,13 +76,13 @@ Sample `games` resource
 
 Retrieve a team's schedule (or all teams' schedules if an `id` is not specified).
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X GET {base_url}/games/5
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 [
@@ -119,7 +119,7 @@ curl -X GET {base_url}/games/5
 Add a new team's schedule
 
 <a id="5"></a>
-#### Example Request
+#### Example request
 
 ```bash
 curl -X POST {base_url}/games \
@@ -151,7 +151,7 @@ curl -X POST {base_url}/games \
 }'
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {
@@ -186,9 +186,9 @@ curl -X POST {base_url}/games \
 
 Update specific fields in a team's game schedule.
 
-Replaces the entire schedule for the team specified by id. Partial updates to the seasonGames array are not supported.
+This operation replaces the entire schedule for the specified team. Partial updates to the `seasonGames` array are not supported.
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X PATCH {base_url}/games/5 \
@@ -220,7 +220,7 @@ curl -X PATCH {base_url}/games/5 \
 }'
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {
@@ -257,21 +257,21 @@ Remove the entire schedule for a team.
 
 Deletes the schedule for the specified team, including all nested seasonGames.
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X DELETE {base_url}/games/5
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {}
 ```
 
 <a id="8"></a>
-## Error Codes 
+## Error codes 
 
 See our [Error Codes](xtra-errors.md) doc for guidance and troubleshooting
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)
