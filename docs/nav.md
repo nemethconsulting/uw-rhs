@@ -10,10 +10,10 @@ Follow these steps to prepare your system to interact with our API
 1. [Set up](prerequisites.md) your system to call our API
 2. [Test](test-system.md) your setup
 
-## Quick Start
+## Quick start
   - [Make your first call](quick-start.md) in just a few steps
 
-## Tutorials for Common Use Cases
+## Tutorials for common use cases
 
 Explore the main features of our API
 
@@ -23,7 +23,7 @@ Explore the main features of our API
 4. [Update your team's win/loss record](tut-update-winloss.md)
 5. [Retrieve the league's win/loss records](tut-retrieve-wlr.md)
 
-## API Reference Docs
+## API reference docs
 
 Find detailed information on methods and properties, with sample code
 
@@ -32,7 +32,7 @@ Find detailed information on methods and properties, with sample code
 3. [stats resource](res-stats.md)  _Coming Soon_
 4. [roster resource](res-roster.md)  _Coming Soon_
 
-## FAQs and Troubleshooting
+## FAQs and troubleshooting
 
 Find answers to common questions and resolve issues with our API
 
