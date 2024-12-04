@@ -9,14 +9,14 @@ The `teams` resource manages information about hockey teams, including their nam
 
 ## Table of Contents
 1. [Base URL](#1)
-2. [Resource Properties](#2)
+2. [Resource properties](#2)
 3. [Operations](#3)
     - [GET](#4)
     - [POST](#5)
     - [PATCH](#6)
     - [DELETE](#7)
-4. [Error Codes](#8)
-5. [Back to Main Menu](nav.md)
+4. [Error codes](#8)
+5. [Back to main menu](nav.md)
 
 <a id="1"></a>
 ## Base URL
@@ -24,7 +24,7 @@ The `teams` resource manages information about hockey teams, including their nam
 `/teams`
 
 <a id="2"></a>
-## Resource Properties
+## Resource properties
 
 Sample `teams` resource
 
@@ -58,13 +58,13 @@ Sample `teams` resource
 
 Retrieve all teams.
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X GET {base_url}/teams
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 [
@@ -95,7 +95,9 @@ curl -X GET {base_url}/teams
 
 Add a new team
 
-#### Example Request
+#### Example request
+
+**Note** When you set the `id` to null, the server will generate a unique identifier for the new team.
 
 ```bash
 curl -X POST {base_url}/teams \
@@ -111,7 +113,7 @@ curl -X POST {base_url}/teams \
 }'
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {
@@ -130,7 +132,7 @@ curl -X POST {base_url}/teams \
 
 Update the details of an existing team. Since the server does not support partial updates, the full team resource must be included in the request.
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X PATCH {base_url}/teams/5 \
@@ -146,7 +148,7 @@ curl -X PATCH {base_url}/teams/5 \
 }'
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {
@@ -163,23 +165,23 @@ curl -X PATCH {base_url}/teams/5 \
 <a id="7"></a>
 ### DELETE `/teams/{id}`
 
-Remove an existing team.
+This operation will permanently remove the team and its associated data from the API.
 
-#### Example Request
+#### Example request
 
 ```bash
 curl -X DELETE {base_url}/teams/7
 ```
 
-#### Example Response
+#### Example response
 
 ```json
 {}
 ```
 
 <a id="8"></a>
-## Error Codes 
+## Error codes 
 
-See our [Error Codes](xtra-errors.md) doc for guidance and troubleshooting
+See our [Error codes](xtra-errors.md) doc for guidance and troubleshooting
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)

@@ -12,12 +12,12 @@ In this tutorial:
 1. [Prerequisites](#1)
 2. [Retrieve all win/loss records for the league using curl](#2)
 3. [Retrieve all win/loss records for the league using Postman Desktop](#3)
-4. [Errors & Troubleshooting](#4)
-5. [Related Topics](#5)
-6. [Back to Main Menu](nav.md)
+4. [Errors & troubleshooting](#4)
+5. [Related topics](#5)
+6. [Back to main menu](nav.md)
 
 <a id="1"></a>
-## Prerequisties
+## Prerequisites
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
 - Make sure you've already added all team details into the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
@@ -25,7 +25,7 @@ In this tutorial:
 <a id="2"></a>
 ## Retrieve all win/loss records for the league using curl
 
-1. At various points in the season, you will want to see all teams' records to calculate standings. You can do this using a simple `GET` call.
+1. Retrieve all teams' records at any point during the season to calculate standings. You can do this using a simple `GET` call.
 
 ```bash
 curl -X GET {base_url}/teams \
@@ -66,12 +66,12 @@ The response should look like:
 <a id="3"></a>
 ## Retrieve all win/loss records for the league using Postman Desktop
 
-1. At various points in the season, you will want to see all teams' records to calculate standings. You can do this using a simple `GET` call.
+1. Retrieve all teams' records at any point during the season to calculate standings. You can do this using a simple `GET` call.
 
     * **METHOD**: GET
     * **URL**: `{base_url}/teams`
     * **Headers**:
-        * `Content-Type: application/json
+        * `Content-Type: application/json'
 
 The response should look like:
 
@@ -104,7 +104,7 @@ The response should look like:
 3. For more details on our API, see our [`teams`](res-teams.md) and [`games`](res-games.md) reference docs.
 
 <a id="4"></a>
-### Errors & Troubleshooting
+### Errors & troubleshooting
 
 1. Errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
@@ -117,7 +117,7 @@ The response should look like:
 
 
 <a id="5"></a>
-## Related Topics
+## Related topics
 
 Here are related tutorials you may want to look at:
 
@@ -125,4 +125,4 @@ Here are related tutorials you may want to look at:
 2. [Add games to your team's calendar](tut-add-games.md)
 3. [Update your team's win/loss record](tut-update-winloss.md)
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)
