@@ -13,12 +13,12 @@ curl and Postman Desktop
 1. [Prerequisites](#1)
 2. [Update the `winLossRatio` using curl](#2)
 3. [Update the `winLossRatio` using Postman Desktop](#3)
-4. [Errors & Troubleshooting](#4)
-5. [Related Topics](#5)
-6. [Back to Main Menu](nav.md)
+4. [Errors & troubleshooting](#4)
+5. [Related topics](#5)
+6. [Back to main menu](nav.md)
 
 <a id="1"></a>
-## Prerequisties
+## Prerequisites
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
 - Make sure you've already added your team details into the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
@@ -26,9 +26,13 @@ curl and Postman Desktop
 <a id="2"></a>
 ## Update the `winLossRatio` using curl
 
-1. Start with a `GET` call to the `teams` resource to retrieve your teams details, or review our [teams resource](res-teams.md) doc to find the required fields.
+1. Start with a `GET` call to the `teams` resource to retrieve your team's details, or review our [teams resource](res-teams.md) doc to find the required fields.
 
-2. Let's assume you are updating the `winLossRatio` for the Seattle Kraken (team `id` = 5) after losing their second game against the Calgary Flames (They won their first game). After updating the `winLossRatio` field, send the following `PATCH` call:
+2. Let's assume you are updating the `winLossRatio` for the Seattle Kraken (team `id` = 5) after losing their second game against the Calgary Flames (They won their first game). 
+
+**Note** The `winLossRatio` field uses the format W-L-OTL where W is wins, L is losses, and OTL is overtime losses.
+
+After updating the `winLossRatio` field, send the following `PATCH` call:
 
 ```bash
 curl -X PATCH {base_url}/teams/5 \
@@ -39,7 +43,7 @@ curl -X PATCH {base_url}/teams/5 \
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
   "winLossRatio": "1-1-0",
-  "coach": "Dave Hakstol",
+  "coach": "Dan Bylsma",
   "numberOfPlayers": 23
 }'
 ```
@@ -53,23 +57,27 @@ The response should look like:
   "headquarters": "Seattle, WA",
   "mascot": "Buoy the Troll",
   "winLossRatio": "1-1-0",
-  "coach": "Dave Hakstol",
+  "coach": "Dan Bylsma",
   "numberOfPlayers": 23
 }
 ```
 
-3. When patching multiple fields, we recommend doing a final `GET` call to ensure the data has been properly propagated to the database.
+3. When patching multiple fields, we recommend making a final `GET` request to ensure the data has been properly propagated to the database.
 
-4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
+4. **NOTE** While it may seem cumbersome to download all resource data and return it just to update a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
 5. As the season progresses, you may want to retrieve the `winLossRatio` for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
 
 <a id="3"></a>
 ## Update the score using Postman Desktop
 
-1. Start with a `GET` call to the `teams` resource to retrieve your teams details, or review our [teams resource](res-teams.md) doc to find the required fields.
+1. Start with a `GET` call to the `teams` resource to retrieve your team's details, or review our [teams resource](res-teams.md) doc to find the required fields.
 
-2. Let's assume you are updating the `winLossRatio` for the New Jersey (team `id` = 6) after losing their second game against the New York Rangers (They won their first game). After updating the `winLossRatio` field, send the following `PATCH` call:
+2. Let's assume you are updating the `winLossRatio` for the New Jersey (team `id` = 6) after losing their second game against the New York Rangers (They won their first game). 
+
+**Note** The `winLossRatio` field uses the format W-L-OTL where W is wins, L is losses, and OTL is overtime losses.
+
+After updating the `winLossRatio` field, send the following `PATCH` call:
 
     * **METHOD**: PATCH
     * **URL**: `{base_url}/teams/6`
@@ -104,14 +112,14 @@ The response should look like:
 }
 ```
 
-3. When patching multiple fields, we recommend doing a final `GET` call to ensure the data has been properly propagated to the database.
+3. When patching multiple fields, we recommend making a final `GET` request to ensure the data has been properly propagated to the database.
 
-4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
+4. **NOTE** While it may seem cumbersome to download all resource data and return it just to update a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
 5. As the season progresses, you may want to retrieve the `winLossRatio` for all teams in the league to calculate standings. To do this, refer to our [Retrieve the league's win/loss records](tut-retrieve-wlr.md) tutorial.
 
 <a id="4"></a>
-### Errors & Troubleshooting
+### Errors & troubleshooting
 
 1. Errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
@@ -124,7 +132,7 @@ The response should look like:
 
 
 <a id="5"></a>
-## Related Topics
+## Related topics
 
 Here are related tutorials you may want to look at:
 
@@ -132,4 +140,4 @@ Here are related tutorials you may want to look at:
 2. [Add games to your team's calendar](tut-add-games.md)
 3. [Retrieve the league's win/loss records](tut-retrieve-wlr.md)
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)

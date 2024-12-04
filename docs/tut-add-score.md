@@ -13,12 +13,12 @@ curl and Postman Desktop
 1. [Prerequisites](#1)
 2. [Update the score using curl](#2)
 3. [Update the score using Postman Desktop](#3)
-4. [Errors & Troubleshooting](#4)
-5. [Related Topics](#5)
-6. [Back to Main Menu](nav.md)
+4. [Errors & troubleshooting](#4)
+5. [Related topics](#5)
+6. [Back to main menu](nav.md)
 
 <a id="1"></a>
-## Prerequisties
+## Prerequisites
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
 - Make sure you've already added your team's schedule into the Rec Hockey Service API. See [Add games to your team's calendar](tut-add-games.md) for assistance.
@@ -28,7 +28,7 @@ curl and Postman Desktop
 
 1. Start with a `GET` call to see the list of current games in the database. Export this to an external editor, update the relevant `finalScore` fields, and return the entire JSON payload using a command like the one in step 2.
 
-2. Let's assume you are updating the score for the Seattle Kraken (team `id` = 5) after their first game against the Vegas Godlen Knights. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNuber`:1 and send the entire dataset back in a `PATCH` call as follows:
+2. Let's assume you are updating the score for the Seattle Kraken (team `id` = 5) after their first game against the Vegas Golden Knights. You have a total of two season games in the API at the moment, so you would download all data, update the `finalScore` field under `gameNumber`:1 and send the entire dataset back in a `PATCH` call as follows:
 
 ```bash
 curl -X PATCH {base_url}/games/5 \
@@ -93,7 +93,7 @@ The response should look like:
 
 3. When patching multiple fields, we recommend doing a final `GET` call to ensure the data has been properly propagated to the database.
 
-4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
+4. **NOTE** While it may seem cumbersome to download all resource data and return it just to update a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
 5. If you want to update your `winLossRatio` to coincide with the recently completed game, you can do so using the [Update your team's win/loss record](tut-update-winloss.md) tutorial.
 
@@ -167,14 +167,14 @@ The response should look like:
 }
 ```
 
-3. When patching multiple fields, we recommend doing a final `GET` call to ensure the data has been properly propagated to the database.
+3. When patching multiple fields, we recommend making a final `GET` request to ensure the data has been properly propagated to the database.
 
-4. **NOTE** While it may seem cumbersome to download all resource data and return it just to updata a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
+4. **NOTE** While it may seem cumbersome to download all resource data and return it just to update a single field, please review the [Limitations of our `json-server`](xtra-limitations.md) doc to understand and potentially troubleshoot this issue.
 
 5. If you want to update your `winLossRatio` to coincide with the recently completed game, you can do so using the [Update your team's win/loss record](tut-update-winloss.md) tutorial.
 
 <a id="4"></a>
-### Errors & Troubleshooting
+### Errors & troubleshooting
 
 1. **Note** on proper data entry the `finalScore` field:
 Ensure that the `homeGame` property aligns with the score order:
@@ -192,7 +192,7 @@ Ensure that the `homeGame` property aligns with the score order:
 **To troubleshoot:** Recheck your command closely and look for these potential errors.
 
 <a id="5"></a>
-## Related Topics
+## Related topics
 
 Here are related tutorials you may want to look at:
 
@@ -200,4 +200,4 @@ Here are related tutorials you may want to look at:
 2. [Add games to your team's calendar](tut-add-games.md)
 3. [Update your team's win/loss record](tut-update-winloss.md)
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)

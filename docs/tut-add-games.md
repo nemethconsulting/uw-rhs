@@ -13,12 +13,12 @@ curl and Postman Desktop
 1. [Prerequisites](#1)
 2. [Add your games using curl](#2)
 3. [Add your games using Postman Desktop](#3)
-4. [Errors & Troubleshooting](#4)
-5. [Related Topics](#5)
-6. [Back to Main Menu](nav.md)
+4. [Errors & troubleshooting](#4)
+5. [Related topics](#5)
+6. [Back to main menu](nav.md)
 
 <a id="1"></a>
-## Prerequisties
+## Prerequisites
 
 - Make sure your system is running the API server. See [Test your set up](test-system.md) if you need help with this.
 - Make sure you've first created a team entry in the Rec Hockey Service API. See [Create an entry for your team](tut-create-team.md) for assistance.
@@ -167,7 +167,7 @@ The response should look like:
 3. Use this method to add any additional games to the team's schedule. When a game is complete, use our [Update the score of a completed game](tut-add-score.md) tutorial to update the db.
 
 <a id="4"></a>
-### Errors & Troubleshooting
+### Errors & troubleshooting
 
 1. One error you may encounter is:
 
@@ -176,7 +176,7 @@ Error: Insert failed, duplicate id
 ```
 Both curl and Postman Desktop will throw this error when you try to `POST` using a  `gameNumber` that already exists. 
 
-**To troubleshoot:** If you receieve this error, do a `GET` call for your team's games and adjust your `gameNumber` for the new game accordingly.
+**To troubleshoot:** If you receive this error, make a `GET` request and adjust your `gameNumber` for the new game accordingly.
 
 2. Other errors often occur because of a mistyped command, including:
     - Forgetting to put a backslash after one of your lines of code in curl
@@ -189,7 +189,7 @@ Both curl and Postman Desktop will throw this error when you try to `POST` using
 
 
 <a id="5"></a>
-## Related Topics
+## Related topics
 
 Here are related tutorials you may want to look at:
 
@@ -197,4 +197,4 @@ Here are related tutorials you may want to look at:
 2. [Update the final score of a game](tut-add-score.md)
 3. [Retrieve the league's win/loss records](tut-get-wins.md)
 
-### [Back to Main Menu](nav.md)
+### [Back to main menu](nav.md)
