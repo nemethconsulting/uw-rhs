@@ -32,7 +32,7 @@ curl {base_url}/teams"
 ```bash
 [
   {
-    "teamId": 1,
+    "id": 1,
     "teamName": "Pittsburgh Penguins",
     "headquarters": "Pittsburgh, PA",
     "mascot": "Iceburgh",
@@ -41,7 +41,7 @@ curl {base_url}/teams"
     "numberOfPlayers": 17
   },
   {
-    "teamId": 2,
+    "id": 2,
     "teamName": "New York Rangers",
     "headquarters": "New York, NY",
     "mascot": "None",
@@ -67,7 +67,7 @@ $ curl {base_url}/games/{id}
 ```bash
 [
   {
-    "teamId": 4,
+    "id": 4,
     "teamName": "Washington Capitals",
     "season": "2024-2025",
     "seasonGames": [
@@ -114,7 +114,7 @@ $ curl {base_url}/games/{id}
 ```js
     [
     {
-        "teamId": 1,
+        "id": 1,
         "teamName": "Pittsburgh Penguins",
         "headquarters": "Pittsburgh, PA",
         "mascot": "Iceburgh",
@@ -123,7 +123,7 @@ $ curl {base_url}/games/{id}
         "numberOfPlayers": 17
     },
     {
-        "teamId": 2,
+        "id": 2,
         "teamName": "New York Rangers",
         "headquarters": "New York, NY",
         "mascot": "None",
@@ -153,7 +153,7 @@ $ curl {base_url}/games/{id}
 ```js
 [
     {
-        "teamId": 4,
+        "id": 4,
         "teamName": "Washington Capitals",
         "season": "2024-2025",
         "seasonGames": [
